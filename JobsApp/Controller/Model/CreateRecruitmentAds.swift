@@ -38,6 +38,8 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.modalPresentationStyle = .fullScreen
         segmentLabel.removeAllSegments()
         for x in 0..<arrayCat.count {
             print(x)
@@ -149,11 +151,15 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
                     photoRef.downloadURL { url, error in
                         if error == nil {
                             print(url!)
-                            
+      
+                            let dataNow = Date()
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                            let DateNow = dateFormatter.string(from: dataNow)
                             self.firestoreURL.collection("RecruitmentAdv")
                                 .addDocument(data:[ "title": self.titleTF.text! ,
                                                     "RecruitmentAdv": self.adsTV.text!,
-                                                    "dateOfRAds": self.date,
+                                                    "dateOfRAds": DateNow,
                                                     "startDate":  self.date,
                                                     "imageURL": "\(url!)",
                                                     "categories": self.arrayCat[self.catSelected]

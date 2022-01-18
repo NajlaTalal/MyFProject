@@ -35,7 +35,7 @@ class GovernmentalJobs: UIViewController {
     
     override func loadView() {
         super.loadView()
-        
+        segmentedControl.selectedSegmentIndex = 0
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -66,6 +66,7 @@ class GovernmentalJobs: UIViewController {
         dateToSring()
         
     }
+
     
     //MARK: -  Read From Data Firebase
     
@@ -75,14 +76,13 @@ class GovernmentalJobs: UIViewController {
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
-                    
+                    self.hr.removeAll()
                     for document in querySnapshot!.documents {
                         let data = document.data()
-                        self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: "Images", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? ""))
+                        self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: data["imageURL"] as? String ?? "", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? ""))
                         print(self.hr)
-                        self.collectionView.reloadData()
                     }
-                    
+                    self.collectionView.reloadData()
                 }
             }
     }
@@ -95,13 +95,15 @@ class GovernmentalJobs: UIViewController {
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
-                    
+                    self.hr.removeAll()
                     for document in querySnapshot!.documents {
-                        let data = document.data()
+                         let data = document.data()
+                        guard  data.isEmpty != true else {return print("No data from firebase")}
                         self.hr.append(RAds(title: data["title"] as? String ?? "title", Images:"images", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? ""))
                         print(self.hr)
-                        self.collectionView.reloadData()
                     }
+                    self.collectionView.reloadData()
+
                     
                 }
             }
@@ -140,9 +142,15 @@ extension GovernmentalJobs: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! GovJobsCell
         cell.titleLabel.text = hr[indexPath.row].title
         cell.recAdsLabel.text = hr[indexPath.row].RecruitmentAds
-                cell.startLabel.text = hr[indexPath.row].startDate ?? "dddd"
+        cell.startLabel.text = hr[indexPath.row].startDate
         let date = stringToDate(Date: hr[indexPath.row].dateOfRAds)
         cell.dateOfRAdsLabel.text = date
+        if let url = URL(string:hr[indexPath.row].Images) {
+            if let data = try? Data(contentsOf: url ) {
+                cell.imageAds.image = UIImage(data: data )
+            }
+        }
+       
         
         cell.ShareButton.addTarget(self, action: #selector(presentShareSheet(_:)), for: .touchUpInside)
         cell.ShareButton.tintColor = .gray

@@ -12,7 +12,9 @@ class NavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+         let newViewController = storyBoard.instantiateViewController(withIdentifier: "GovernmentalJobs") as! GovernmentalJobs
+         self.present(newViewController, animated: true, completion: nil)
     }
     
 

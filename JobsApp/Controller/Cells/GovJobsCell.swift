@@ -18,6 +18,7 @@ class GovJobsCell: UICollectionViewCell {
     let recAdsLabel = UILabel(frame: CGRect(x: 100, y: 50,  width: 250 , height: 30 ))
     let dateOfRAdsLabel = UILabel(frame: CGRect(x: 10, y: 5,  width: 250 , height: 30 ))
     let startLabel =  UILabel(frame: CGRect(x: 50, y: 100,  width: 250 , height: 30 ))
+    let imageAds =  UIImageView(frame: CGRect(x: 50, y: 50,  width: 50 , height: 30 ))
     //MARK: - ShareButton
     
     let ShareButton: UIButton = {
@@ -54,6 +55,8 @@ class GovJobsCell: UICollectionViewCell {
         contentView.addSubview(dateOfRAdsLabel)
         contentView.addSubview(ShareButton)
         contentView.addSubview(startLabel)
+        
+        contentView.addSubview(imageAds)
         
         //MARK: - UI
         
