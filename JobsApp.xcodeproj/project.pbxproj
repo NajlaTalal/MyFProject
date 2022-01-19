@@ -25,6 +25,7 @@
 		B33F51462784C6BE0051016D /* Tajawal-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B33F51452784C6BE0051016D /* Tajawal-ExtraLight.ttf */; };
 		B33F51482784C7FC0051016D /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B33F51472784C7FC0051016D /* Tajawal-Medium.ttf */; };
 		B33F514A2784CAD20051016D /* NotoNaskhArabic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B33F51492784CAD20051016D /* NotoNaskhArabic-Medium.ttf */; };
+		B34AA122279804630048B750 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34AA121279804630048B750 /* TestClass.swift */; };
 		B36864A627946C6D00156793 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36864A527946C6C00156793 /* NavigationController.swift */; };
 		B375DFA327820A0A0084D555 /* CreateRecruitmentAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B375DFA227820A0A0084D555 /* CreateRecruitmentAds.swift */; };
 		B375DFA827821C8F0084D555 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B375DFA727821C8F0084D555 /* Struct.swift */; };
@@ -77,6 +78,7 @@
 		B33F51452784C6BE0051016D /* Tajawal-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraLight.ttf"; sourceTree = "<group>"; };
 		B33F51472784C7FC0051016D /* Tajawal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.ttf"; sourceTree = "<group>"; };
 		B33F51492784CAD20051016D /* NotoNaskhArabic-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoNaskhArabic-Medium.ttf"; sourceTree = "<group>"; };
+		B34AA121279804630048B750 /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
 		B36864A527946C6C00156793 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B375DFA227820A0A0084D555 /* CreateRecruitmentAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecruitmentAds.swift; sourceTree = "<group>"; };
 		B375DFA727821C8F0084D555 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				B3888E6427806D8200009493 /* SceneDelegate.swift */,
 				B375DFA5278217200084D555 /* Fonts */,
 				B3888E6827806D8200009493 /* Main.storyboard */,
+				B34AA121279804630048B750 /* TestClass.swift */,
 				B3888E6B27806D8500009493 /* Assets.xcassets */,
 				B3888E6D27806D8500009493 /* LaunchScreen.storyboard */,
 				B3888E7027806D8500009493 /* Info.plist */,
@@ -396,6 +399,7 @@
 				B3DB45A227818DBC0018055A /* ImpDatesCell.swift in Sources */,
 				B301802A278DD5F800104588 /* DetailsVC.swift in Sources */,
 				B31595B72784361400F6A320 /* StructRecruitmentAds.swift in Sources */,
+				B34AA122279804630048B750 /* TestClass.swift in Sources */,
 				B3888E6527806D8200009493 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

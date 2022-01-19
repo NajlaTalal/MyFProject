@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ydr-d2-Jom">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IEb-tj-ohh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -426,6 +426,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0L-R1-bf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-36.231884057971016" y="418.52678571428572"/>
+        </scene>
+        <!--Test Class-->
+        <scene sceneID="e9r-zo-YYn">
+            <objects>
+                <viewController id="0BC-zD-NBv" customClass="TestClass" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6vJ-IS-dbf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qWL-Tf-kk0">
+                                <rect key="frame" x="141.5" y="77" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgo-OB-cXL">
+                                <rect key="frame" x="174" y="308" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="actionSelected:" destination="0BC-zD-NBv" eventType="touchUpInside" id="SMV-YF-trf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RBZ-oI-gLa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qWL-Tf-kk0" firstAttribute="centerX" secondItem="RBZ-oI-gLa" secondAttribute="centerX" id="Ekv-0q-FTe"/>
+                            <constraint firstItem="qWL-Tf-kk0" firstAttribute="top" secondItem="RBZ-oI-gLa" secondAttribute="top" constant="33" id="NcY-UR-5C8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentTest" destination="qWL-Tf-kk0" id="WMe-Cn-ebv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VuS-QS-kPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="1964"/>
         </scene>
         <!--DetailsVC-->
         <scene sceneID="VVr-fu-EC3">

@@ -80,7 +80,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
         
         // here call upload image
         //        uploadToCloud(fileURL: URL)
-        print("taraf")
+    
         guard imageSendFiresbase != nil else {return }  // here you can ad alert to show user upload data
         uploadToCloud(image: imageSendFiresbase!)
         
