@@ -20,7 +20,7 @@ class MyAds: UIViewController {
     let ID = Auth.auth().currentUser?.uid
     let storage = Storage.storage()
     var imageUrl : String = ""
-    
+    var idProject = ""
     weak var myAdsCollectionView: UICollectionView!
     
     override func loadView() {
@@ -46,7 +46,7 @@ class MyAds: UIViewController {
         self.myAdsCollectionView.dataSource = self
         self.myAdsCollectionView.delegate = self
         self.myAdsCollectionView.register(MyAdsCell.self, forCellWithReuseIdentifier: "MyCells")
-        
+        view.layer.cornerRadius = 10
         
         readdata()
         // Do any additional setup after loading the view.
@@ -62,12 +62,40 @@ class MyAds: UIViewController {
                       for document in querySnapshot!.documents {
                           let data = document.data()
                  
-                    self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: data["imageURL"] as? String ?? "", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? ""))
+                          self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: data["imageURL"] as? String ?? "", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? "", idAdv: data["idAdv"] as? String ?? "" ))
+                       
                     print(self.hr)
                 }
                 self.myAdsCollectionView.reloadData()
             }
         }
+    }
+    //MARK: - SignOutButton
+    
+    @IBAction func Signout(_ sender: Any) {
+        
+        
+        let alert = UIAlertController(title: "تنبيه", message: "هل أنت متأكد أنك تريد تسجيل الخروج؟", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "تسجيل الخروج", style: .destructive) { action in
+            
+            do {
+                try Auth.auth().signOut()
+                self.dismiss(animated: true, completion: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
+        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "إلغاء", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+        //
+        //        let firebaseAuth = Auth.auth()
+        //    do {
+        //      try firebaseAuth.signOut()
+        //    } catch let signOutError as NSError {
+        //      print("Error signing out: %@", signOutError)
+        //    }
     }
 }
 
@@ -87,21 +115,41 @@ extension MyAds: UICollectionViewDataSource {
         cell.titleLabel.text = hr[indexPath.row].title
         cell.recAdsLabel.text = hr[indexPath.row].RecruitmentAds
         cell.startLabel.text = hr[indexPath.row].startDate
+        self.idProject = hr[indexPath.row].idAdv
+        cell.deleteButton.addTarget(self, action:  #selector(delete), for: .touchUpInside)
         let date = stringToDate(Date: hr[indexPath.row].dateOfRAds)
         cell.dateOfRAdsLabel.text = date
+        
         if let url = URL(string:hr[indexPath.row].Images) {
             if let data = try? Data(contentsOf: url ) {
                 cell.imageAds.image = UIImage(data: data )
             }
         }
-        
+     
         return cell
     }
     
-    
-    
 
-    
+    @objc func delete(sender: UIButton!) {
+        
+          let alert = UIAlertController(title: "تنبية" , message: "هل تريد حذف الاعلان ؟", preferredStyle: .alert)
+           
+          let action = UIAlertAction(title: "نعم", style: .default) { action in
+             
+              self.db.collection("RecruitmentAdv").document(self.idProject).delete() { err in
+              if let err = err {
+                print("Error removing document: \(err.localizedDescription)")
+              } else {
+                 
+                self.navigationController?.popViewController(animated: true)
+              }
+            }
+          }
+          alert.addAction(action)
+          alert.addAction(UIAlertAction(title: "الغاء", style: .cancel , handler: nil ))
+          present(alert, animated: true , completion: nil)
+           
+    }
     
     }
     

@@ -60,8 +60,8 @@ class GovernmentalJobs: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.register(GovJobsCell.self, forCellWithReuseIdentifier: "MyCell")
-        
-        
+    
+
         readdata()
         pastDate.timeAgoDisplay()
         dateToSring()
@@ -69,6 +69,30 @@ class GovernmentalJobs: UIViewController {
     }
     
     
+    @IBAction func selected(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex {
+            
+        case 0 :
+            readdata()
+        case 1 :
+        filter(categories: "صحية")
+        case 2 :
+            filter(categories: "تعليمية")
+        case 3 :
+            filter(categories: "عسكرية")
+        case 4 :
+            filter(categories: "ادارية")
+        case 5 :
+            filter(categories: "مالية")
+        case 6 :
+            filter(categories: "تقنية")
+    
+            
+        default :
+            filter(categories: "الكل")
+        }
+        
+    }
     //MARK: -  Read From Data Firebase
     
     func readdata() {
@@ -79,7 +103,7 @@ class GovernmentalJobs: UIViewController {
                 self.hr.removeAll()
                 for document in querySnapshot!.documents {
                     let data = document.data()
-                    self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: data["imageURL"] as? String ?? "", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? ""))
+                    self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: data["imageURL"] as? String ?? "", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? "", idAdv: data["idAdv"] as? String ?? ""))
                     print(self.hr)
                 }
                 self.collectionView.reloadData()
@@ -99,7 +123,7 @@ class GovernmentalJobs: UIViewController {
                     for document in querySnapshot!.documents {
                         let data = document.data()
                         guard  data.isEmpty != true else {return print("No data from firebase")}
-                        self.hr.append(RAds(title: data["title"] as? String ?? "title", Images:"images", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? ""))
+                        self.hr.append(RAds(title: data["title"] as? String ?? "title", Images:"images", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? "", idAdv: data["idAdv"] as? String ?? ""))
                         print(self.hr)
                     }
                     self.collectionView.reloadData()
@@ -159,7 +183,7 @@ extension GovernmentalJobs: UICollectionViewDataSource {
         //MARK: - UI
         
         cell.layer.borderWidth = 1
-        cell.layer.borderColor = #colorLiteral(red: 0.09203992039, green: 0.5343717337, blue: 0.6424081922, alpha: 1)
+        cell.layer.borderColor = #colorLiteral(red: 0.09430689365, green: 0.533408463, blue: 0.6434716582, alpha: 1)
         cell.layer.cornerRadius = 10
         cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
@@ -188,7 +212,35 @@ extension GovernmentalJobs: UICollectionViewDataSource {
     }
     
     
-    
+    func filter(categories : String ){
+         hr.removeAll()
+            db.collection("RecruitmentAdv").whereField( "categories", isEqualTo:  categories ).addSnapshotListener{(querySnapshot, error) in
+                
+                if let err = error {
+                    print("Error getting documents: \(err.localizedDescription)")
+                    
+                 
+                    
+                } else {
+                    self.hr.removeAll()
+                    for document in querySnapshot!.documents {
+                    
+                        let data = document.data()
+                        guard  data.isEmpty != true else {return print("No data from firebase")}
+                        self.hr.append(RAds(title: data["title"] as? String ?? "title", Images:"images", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? "", idAdv: data["idAdv"] as? String ?? ""))
+                        
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                        
+                    }
+                }
+                
+            }
+           
+        }
+     
     
     
 }

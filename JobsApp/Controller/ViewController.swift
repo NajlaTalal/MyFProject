@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 500).isActive = true
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 400).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true

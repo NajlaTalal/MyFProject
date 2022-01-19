@@ -41,6 +41,7 @@ class ForgotPasswordVC: UIViewController {
         }))
         
         self.present(forgotPasswordAlert, animated: true, completion: nil)
+        
     }
 }
 

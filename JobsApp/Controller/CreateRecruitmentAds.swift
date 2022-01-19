@@ -23,7 +23,8 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var datePickerbu: UIDatePicker!
     @IBOutlet weak var segmentLabel: UISegmentedControl!
     
-    let arrayCat = [" الكل","صحيه","تعليمية","عسكريه"]
+    let arrayCat = ["الكل","صحية","تعليمية","عسكرية","ادارية","مالية","تقنية"]
+//    let arrayCat = ["الكل","صحية","تعليمية","تقنية","عسكرية","ادارية","مالية"]
     
     var imageSendFiresbase : UIImage?
     //MARK: - Variables
@@ -100,15 +101,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
-    
-    @IBAction func pullImageTapped(_ sender: Any) {
-        let storage = Storage.storage()
-        let storageRef = storage.reference()
-        
-        //        let ref = storageRef.child("UploadPhotoOne")
-        //        imageDownloaded.sd_setImage(with: ref)
-    }
-    
+  
     func checkPermissions() {
         if PHPhotoLibrary.authorizationStatus() != PHAuthorizationStatus.authorized {
             PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) -> Void in
@@ -158,6 +151,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
                             let dateFormatter = DateFormatter()
                             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                             let DateNow = dateFormatter.string(from: dataNow)
+                           
                             self.firestoreURL.collection("RecruitmentAdv")
                                 .addDocument(data:[ "title": self.titleTF.text! ,
                                                     "RecruitmentAdv": self.adsTV.text!,
@@ -165,49 +159,21 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
                                                     "startDate":  self.date,
                                                     "imageURL": "\(url!)",
                                                     "categories": self.arrayCat[self.catSelected],
-                                                    "emailUser": Auth.auth().currentUser?.email
+                                                    "emailUser": Auth.auth().currentUser?.email ,
+                                                    "idAdv":  self.db.collection("RecruitmentAdv").document().documentID
                                                   ])
                             
                             
                             
                             print("Successfully saved data")
-                            //                        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                            //                        let vc = storyBoard.instantiateViewController(withIdentifier: "NavigationController") as! NavigationController
-                            //
-                            //                        self.present(vc, animated: true, completion: nil)
+                        
                             self.performSegue(withIdentifier: "moveHome", sender: self)
                             
                         }
                     }
                 }
             }
-            //        let uploadTask = photoRef.putFile(from: localFule, metadata: nil) { (metadata, err) in
-            //            guard let metadata = metadata else {
-            //                print(err?.localizedDescription)
-            //                return
-            //            }
-            //            photoRef.downloadURL { [self] urlImage, error in
-            //                if error == nil {
-            //                    print(urlImage!)
-            //                    //here upload data to firestore with url image
-            //                    self.firestoreURL.collection("RecruitmentAdv")
-            //                        .addDocument(data: [
-            //
-            //
-            //                            "Images":urlImage! ,
-            //                            //                "categories": categories!
-            //                        ])
-            //                    { (error) in
-            //                        if let e = error {
-            //                            print(e.localizedDescription)
-            //
-            //                        } else {
-            //
-            //                            print("Successfully saved data")
-            //                        }
-            //                    }
-            //                }
-            //            }
+        
         }
         
     }

@@ -19,6 +19,7 @@ class Login: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+  
     //MARK: -  ViewDidload
     
     override func viewDidLoad() {
@@ -54,9 +55,13 @@ class Login: UIViewController {
             }
         }
         
-        
+      
     }
+   
+    @IBAction func resetPass(_ sender: Any) {
     
+    
+}
 }
 //MARK: -  Extension TextField
 

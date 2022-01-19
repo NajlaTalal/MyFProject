@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		B301802A278DD5F800104588 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3018029278DD5F800104588 /* DetailsVC.swift */; };
 		B30F799527818B2500AD3E58 /* ImportantDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30F799427818B2500AD3E58 /* ImportantDates.swift */; };
-		B311E53027891E17008F8689 /* LunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B311E52F27891E17008F8689 /* LunchScreen.swift */; };
-		B311E53227891ED1008F8689 /* lf20_uqpfhc4y.json in Resources */ = {isa = PBXBuildFile; fileRef = B311E53127891ED1008F8689 /* lf20_uqpfhc4y.json */; };
-		B311E535278920D0008F8689 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B311E534278920D0008F8689 /* Lottie */; };
 		B31595B72784361400F6A320 /* StructRecruitmentAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31595B62784361400F6A320 /* StructRecruitmentAds.swift */; };
 		B31A563527923B8800A68D08 /* btn_click_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = B31A563427923B8800A68D08 /* btn_click_sound.wav */; };
 		B31CC8772796DF8A0051A77E /* MyAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CC8762796DF8A0051A77E /* MyAds.swift */; };
@@ -19,13 +16,11 @@
 		B33960522782E30700C5963B /* GovJobsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33960512782E30600C5963B /* GovJobsCell.swift */; };
 		B33960542782E80E00C5963B /* GovernmentalJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33960532782E80E00C5963B /* GovernmentalJobs.swift */; };
 		B33DF9E92781C43200685BDF /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DF9E82781C43200685BDF /* ForgotPasswordVC.swift */; };
-		B33DF9EE2781C60200685BDF /* PrivateSectorJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DF9ED2781C60200685BDF /* PrivateSectorJobs.swift */; };
 		B33DF9F02781DBAF00685BDF /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DF9EF2781DBAF00685BDF /* Login.swift */; };
 		B33E004E278C644600545277 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B33E004D278C644600545277 /* FirebaseStorage */; };
 		B33F51462784C6BE0051016D /* Tajawal-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B33F51452784C6BE0051016D /* Tajawal-ExtraLight.ttf */; };
 		B33F51482784C7FC0051016D /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B33F51472784C7FC0051016D /* Tajawal-Medium.ttf */; };
 		B33F514A2784CAD20051016D /* NotoNaskhArabic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B33F51492784CAD20051016D /* NotoNaskhArabic-Medium.ttf */; };
-		B34AA122279804630048B750 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34AA121279804630048B750 /* TestClass.swift */; };
 		B36864A627946C6D00156793 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36864A527946C6C00156793 /* NavigationController.swift */; };
 		B375DFA327820A0A0084D555 /* CreateRecruitmentAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B375DFA227820A0A0084D555 /* CreateRecruitmentAds.swift */; };
 		B375DFA827821C8F0084D555 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B375DFA727821C8F0084D555 /* Struct.swift */; };
@@ -64,8 +59,6 @@
 /* Begin PBXFileReference section */
 		B3018029278DD5F800104588 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		B30F799427818B2500AD3E58 /* ImportantDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantDates.swift; sourceTree = "<group>"; };
-		B311E52F27891E17008F8689 /* LunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchScreen.swift; sourceTree = "<group>"; };
-		B311E53127891ED1008F8689 /* lf20_uqpfhc4y.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf20_uqpfhc4y.json; sourceTree = "<group>"; };
 		B31595B62784361400F6A320 /* StructRecruitmentAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructRecruitmentAds.swift; sourceTree = "<group>"; };
 		B31A563427923B8800A68D08 /* btn_click_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn_click_sound.wav; sourceTree = "<group>"; };
 		B31CC8762796DF8A0051A77E /* MyAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAds.swift; sourceTree = "<group>"; };
@@ -73,12 +66,10 @@
 		B33960512782E30600C5963B /* GovJobsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovJobsCell.swift; sourceTree = "<group>"; };
 		B33960532782E80E00C5963B /* GovernmentalJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovernmentalJobs.swift; sourceTree = "<group>"; };
 		B33DF9E82781C43200685BDF /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
-		B33DF9ED2781C60200685BDF /* PrivateSectorJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateSectorJobs.swift; sourceTree = "<group>"; };
 		B33DF9EF2781DBAF00685BDF /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B33F51452784C6BE0051016D /* Tajawal-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraLight.ttf"; sourceTree = "<group>"; };
 		B33F51472784C7FC0051016D /* Tajawal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.ttf"; sourceTree = "<group>"; };
 		B33F51492784CAD20051016D /* NotoNaskhArabic-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoNaskhArabic-Medium.ttf"; sourceTree = "<group>"; };
-		B34AA121279804630048B750 /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
 		B36864A527946C6C00156793 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B375DFA227820A0A0084D555 /* CreateRecruitmentAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecruitmentAds.swift; sourceTree = "<group>"; };
 		B375DFA727821C8F0084D555 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
@@ -107,7 +98,6 @@
 				B3888EDA2780ABF500009493 /* FirebaseAuth in Frameworks */,
 				B3888EDC2780ABF500009493 /* FirebaseFirestore in Frameworks */,
 				B33E004E278C644600545277 /* FirebaseStorage in Frameworks */,
-				B311E535278920D0008F8689 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,9 +124,11 @@
 				B33960532782E80E00C5963B /* GovernmentalJobs.swift */,
 				B31CC8762796DF8A0051A77E /* MyAds.swift */,
 				B3018029278DD5F800104588 /* DetailsVC.swift */,
-				B311E52F27891E17008F8689 /* LunchScreen.swift */,
 				B37A0D792785CE2A006A398F /* Dates.swift */,
-				B33DF9ED2781C60200685BDF /* PrivateSectorJobs.swift */,
+				B36864A527946C6C00156793 /* NavigationController.swift */,
+				B375DFA227820A0A0084D555 /* CreateRecruitmentAds.swift */,
+				B3888E6627806D8200009493 /* ViewController.swift */,
+				B30F799427818B2500AD3E58 /* ImportantDates.swift */,
 				B3DB45A3278193A20018055A /* Cells */,
 				B33DF9EA2781C48400685BDF /* Model */,
 			);
@@ -154,15 +146,11 @@
 		B33DF9EA2781C48400685BDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B3888E6627806D8200009493 /* ViewController.swift */,
 				B3888E962780A72500009493 /* SignUpVC.swift */,
 				B33DF9E82781C43200685BDF /* ForgotPasswordVC.swift */,
 				B31595B62784361400F6A320 /* StructRecruitmentAds.swift */,
 				B33DF9EF2781DBAF00685BDF /* Login.swift */,
-				B375DFA227820A0A0084D555 /* CreateRecruitmentAds.swift */,
-				B36864A527946C6C00156793 /* NavigationController.swift */,
 				B375DFA727821C8F0084D555 /* Struct.swift */,
-				B30F799427818B2500AD3E58 /* ImportantDates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,12 +200,10 @@
 				B3888E6427806D8200009493 /* SceneDelegate.swift */,
 				B375DFA5278217200084D555 /* Fonts */,
 				B3888E6827806D8200009493 /* Main.storyboard */,
-				B34AA121279804630048B750 /* TestClass.swift */,
 				B3888E6B27806D8500009493 /* Assets.xcassets */,
 				B3888E6D27806D8500009493 /* LaunchScreen.storyboard */,
 				B3888E7027806D8500009493 /* Info.plist */,
 				B3888ED42780AB1000009493 /* GoogleService-Info.plist */,
-				B311E53127891ED1008F8689 /* lf20_uqpfhc4y.json */,
 			);
 			path = JobsApp;
 			sourceTree = "<group>";
@@ -252,7 +238,6 @@
 				B3888ED72780ABF500009493 /* FirebaseAnalytics */,
 				B3888ED92780ABF500009493 /* FirebaseAuth */,
 				B3888EDB2780ABF500009493 /* FirebaseFirestore */,
-				B311E534278920D0008F8689 /* Lottie */,
 				B33E004D278C644600545277 /* FirebaseStorage */,
 			);
 			productName = JobsApp;
@@ -349,7 +334,6 @@
 			files = (
 				B3888E6F27806D8500009493 /* LaunchScreen.storyboard in Resources */,
 				B31A563527923B8800A68D08 /* btn_click_sound.wav in Resources */,
-				B311E53227891ED1008F8689 /* lf20_uqpfhc4y.json in Resources */,
 				B3888ED52780AB1000009493 /* GoogleService-Info.plist in Resources */,
 				B3888E6C27806D8500009493 /* Assets.xcassets in Resources */,
 				B33F51462784C6BE0051016D /* Tajawal-ExtraLight.ttf in Resources */,
@@ -387,11 +371,9 @@
 				B375DFA327820A0A0084D555 /* CreateRecruitmentAds.swift in Sources */,
 				B33DF9F02781DBAF00685BDF /* Login.swift in Sources */,
 				B33DF9E92781C43200685BDF /* ForgotPasswordVC.swift in Sources */,
-				B311E53027891E17008F8689 /* LunchScreen.swift in Sources */,
 				B31CC879279711140051A77E /* MyAdsCell.swift in Sources */,
 				B3888E6727806D8200009493 /* ViewController.swift in Sources */,
 				B33960542782E80E00C5963B /* GovernmentalJobs.swift in Sources */,
-				B33DF9EE2781C60200685BDF /* PrivateSectorJobs.swift in Sources */,
 				B3888E6327806D8200009493 /* AppDelegate.swift in Sources */,
 				B37A0D7A2785CE2A006A398F /* Dates.swift in Sources */,
 				B30F799527818B2500AD3E58 /* ImportantDates.swift in Sources */,
@@ -399,7 +381,6 @@
 				B3DB45A227818DBC0018055A /* ImpDatesCell.swift in Sources */,
 				B301802A278DD5F800104588 /* DetailsVC.swift in Sources */,
 				B31595B72784361400F6A320 /* StructRecruitmentAds.swift in Sources */,
-				B34AA122279804630048B750 /* TestClass.swift in Sources */,
 				B3888E6527806D8200009493 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,11 +763,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B311E534278920D0008F8689 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B311E533278920CF008F8689 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
 		B33E004D278C644600545277 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B3888ED62780ABF500009493 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

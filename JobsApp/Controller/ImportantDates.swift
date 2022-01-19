@@ -88,33 +88,23 @@ class ImportantDates: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //MARK: -  UI
         
-//        var separatorLineView = UIView(frame: CGRect(x: 0, y: 0, width: cell.frame.size.width, height:  cell.frame.size.height))
         
-        //        cell.layer.borderWidth = 1
-        //        cell.contentView.frame.size = CGSize(width: 100, height: 100)
-        //        cell.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        //        cell.layer.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
-        //        cell.layer.cornerRadius = 10
-        
-        /// change size as you need.
-//        separatorLineView.backgroundColor = UIColor.white
         // you can also put image here
         var separatorLineView = UIView(frame: CGRect(x: 20, y: 20, width: cell.frame.size.width, height:  cell.frame.size.height))
-               
+        
         cell.contentView.addSubview(separatorLineView)
-//        cell.contentView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+        cell.contentView.backgroundColor = #colorLiteral(red: 0.09430689365, green: 0.533408463, blue: 0.6434716582, alpha: 1)
         cell.contentView.tintColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
+        
         cell.textLabel!.textAlignment = .right
-//        cell.textLabel!.textColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
-        cell.textLabel!.font = UIFont(name: "Tajawal-Medium", size: 20)
+        cell.textLabel!.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.textLabel!.font = UIFont(name: "Tajawal-Medium", size: 15)
         cell.textLabel!.numberOfLines = 6
-        cell.layer.shadowColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
-        // Your choice here.
         cell.layer.borderWidth = 1
         cell.contentView.frame.size = CGSize(width: 100, height: 100)
-//        cell.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        //        cell.layer.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
-//        cell.layer.cornerRadius = 5
+        cell.layer.borderColor = #colorLiteral(red: 0.0257745944, green: 0.05412763357, blue: 0.2478517592, alpha: 1)
+        cell.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+     
         
         
         return cell
@@ -130,7 +120,7 @@ class ImportantDates: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 170
+            return 140
         } else {
             return 70
         }
@@ -140,34 +130,6 @@ class ImportantDates: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
-    
-    //MARK: - SignOutButton
-    
-    @IBAction func Signout(_ sender: Any) {
-        
-        
-        let alert = UIAlertController(title: "تنبيه", message: "هل أنت متأكد أنك تريد تسجيل الخروج؟", preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: "تسجيل الخروج", style: .destructive) { action in
-            
-            do {
-                try Auth.auth().signOut()
-                self.dismiss(animated: true, completion: nil)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        
-        alert.addAction(action)
-        alert.addAction(UIAlertAction(title: "إلغاء", style: .cancel, handler: nil))
-        present(alert, animated: true, completion: nil)
-        //
-        //        let firebaseAuth = Auth.auth()
-        //    do {
-        //      try firebaseAuth.signOut()
-        //    } catch let signOutError as NSError {
-        //      print("Error signing out: %@", signOutError)
-        //    }
-    }
     
     //MARK:- Search Bar
     

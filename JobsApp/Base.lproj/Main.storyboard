@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IEb-tj-ohh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ydr-d2-Jom">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -9,9 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NotoNaskhArabic-Medium.ttf">
-            <string>NotoNaskhArabic-Medium</string>
-        </array>
         <array key="Tajawal-ExtraLight.ttf">
             <string>Tajawal-ExtraLight</string>
         </array>
@@ -23,21 +20,22 @@
         <!--Sign UpVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignUpVC" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SignUpVC" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="التسجيل" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUG-2g-Sn4">
-                                <rect key="frame" x="178" y="127" width="90" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التسجيل" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUG-2g-Sn4">
+                                <rect key="frame" x="150" y="144" width="114" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5Bs-GW-Kfo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBY-Fw-aEM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBY-Fw-aEM">
                                 <rect key="frame" x="168" y="577" width="80" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <buttonConfiguration key="configuration" style="filled" title="التسجيل" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
                                     <color key="baseBackgroundColor" red="0.031113255940000001" green="0.053301994149999997" blue="0.23717645200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -47,34 +45,43 @@
                                     <action selector="SignUpBu:" destination="hQX-Gz-XkQ" eventType="touchUpInside" id="osx-uv-R6G"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الاسم" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6f-fw-TMO">
-                                <rect key="frame" x="42" y="238" width="329" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الاسم" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6f-fw-TMO">
+                                <rect key="frame" x="42" y="238" width="330" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1PT-2f-lKu"/>
+                                </constraints>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الهوية الوطنية" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPy-aQ-AUP">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الهوية الوطنية" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPy-aQ-AUP">
                                 <rect key="frame" x="42" y="313" width="329" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="kVM-so-6ck"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="البريد الإلكتروني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-Fc-5af">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="البريد الإلكتروني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-Fc-5af">
                                 <rect key="frame" x="42" y="384" width="329" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="9CV-lW-JZx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IM6-Nh-qg3">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IM6-Nh-qg3">
                                 <rect key="frame" x="42" y="471" width="329" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="CQC-Rh-I4J"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvI-sn-aJv">
                                 <rect key="frame" x="196" y="732" width="190" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="لديك حساب مسبقًا ؟">
                                     <fontDescription key="titleFontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
@@ -86,6 +93,25 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="bgColor"/>
+                        <constraints>
+                            <constraint firstItem="D6f-fw-TMO" firstAttribute="centerX" secondItem="IUG-2g-Sn4" secondAttribute="centerX" id="2Wg-yZ-ULF"/>
+                            <constraint firstItem="QBY-Fw-aEM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="168" id="3JG-lJ-33S"/>
+                            <constraint firstItem="gPy-aQ-AUP" firstAttribute="top" secondItem="D6f-fw-TMO" secondAttribute="bottom" constant="41" id="6Ny-qr-u0Z"/>
+                            <constraint firstItem="mtf-Fc-5af" firstAttribute="leading" secondItem="IM6-Nh-qg3" secondAttribute="leading" id="ARn-qo-R9B"/>
+                            <constraint firstItem="mtf-Fc-5af" firstAttribute="trailing" secondItem="IM6-Nh-qg3" secondAttribute="trailing" id="Dlc-8O-fYj"/>
+                            <constraint firstItem="IUG-2g-Sn4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="FBG-wL-sl3"/>
+                            <constraint firstItem="IM6-Nh-qg3" firstAttribute="top" secondItem="mtf-Fc-5af" secondAttribute="bottom" constant="53" id="atR-xN-DjO"/>
+                            <constraint firstItem="gPy-aQ-AUP" firstAttribute="trailing" secondItem="mtf-Fc-5af" secondAttribute="trailing" id="bYG-04-FJM"/>
+                            <constraint firstItem="gPy-aQ-AUP" firstAttribute="leading" secondItem="mtf-Fc-5af" secondAttribute="leading" id="bgc-xI-BgS"/>
+                            <constraint firstItem="D6f-fw-TMO" firstAttribute="leading" secondItem="gPy-aQ-AUP" secondAttribute="leading" id="cH5-jP-Psh"/>
+                            <constraint firstItem="mtf-Fc-5af" firstAttribute="top" secondItem="gPy-aQ-AUP" secondAttribute="bottom" constant="37" id="hmh-aO-QGS"/>
+                            <constraint firstItem="D6f-fw-TMO" firstAttribute="trailing" secondItem="gPy-aQ-AUP" secondAttribute="trailing" id="jV1-AY-Nl1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IUG-2g-Sn4" secondAttribute="trailing" constant="150" id="kpK-v5-Oga"/>
+                            <constraint firstItem="IUG-2g-Sn4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="nLX-3N-dUy"/>
+                            <constraint firstItem="D6f-fw-TMO" firstAttribute="top" secondItem="IUG-2g-Sn4" secondAttribute="bottom" constant="73" id="t43-tq-6Rh"/>
+                            <constraint firstItem="D6f-fw-TMO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="xbn-oT-zQ8"/>
+                            <constraint firstItem="QBY-Fw-aEM" firstAttribute="top" secondItem="IM6-Nh-qg3" secondAttribute="bottom" constant="72" id="xrx-RT-fSU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xXD-xd-mAb"/>
                     <connections>
@@ -108,35 +134,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تسجيل الدخول" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KW-Sz-Y3G">
-                                <rect key="frame" x="117" y="165" width="182" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسجيل الدخول" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KW-Sz-Y3G">
+                                <rect key="frame" x="115" y="150" width="184" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ghO-aF-a65"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq5-NR-eAu">
-                                <rect key="frame" x="280" y="301" width="71" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoNaskhArabic-Medium" family="Noto Naskh Arabic" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="n@n.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42n-rS-BT9">
-                                <rect key="frame" x="60" y="243" width="295" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="n@n.com" placeholder="البريد الإلكتروني" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42n-rS-BT9">
+                                <rect key="frame" x="60" y="240" width="294" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1Gp-w9-c5a"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-Wd-dDn">
-                                <rect key="frame" x="60" y="330" width="295" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة المرور" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-Wd-dDn">
+                                <rect key="frame" x="60" y="334" width="294" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="5Kf-XH-GWL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJN-qf-pMT">
-                                <rect key="frame" x="154" y="479" width="118" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJN-qf-pMT">
+                                <rect key="frame" x="120" y="478" width="174" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="ie8-Dg-ZJE"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="تسجيل الدخول">
                                     <fontDescription key="titleFontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
@@ -147,24 +174,41 @@
                                     <action selector="LoginBu:" destination="Yuv-Ur-r0x" eventType="touchUpInside" id="m58-de-brr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKi-uJ-kn0">
-                                <rect key="frame" x="157" y="396" width="198" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKi-uJ-kn0">
+                                <rect key="frame" x="90" y="417" width="234" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="JVc-0h-ysb"/>
+                                </constraints>
+                                <color key="tintColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="هل نسيت كلمة المرور ؟">
                                     <fontDescription key="titleFontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetPass:" destination="Yuv-Ur-r0x" eventType="touchUpInside" id="5qv-BW-K4l"/>
+                                    <segue destination="ZR8-c6-eUm" kind="custom" id="BSl-fX-eIV"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="البريد الإلكتروني" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1T-xa-RfT">
-                                <rect key="frame" x="249" y="204" width="106" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoNaskhArabic-Medium" family="Noto Naskh Arabic" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ahx-dO-C2k"/>
                         <color key="backgroundColor" name="bgColor"/>
+                        <constraints>
+                            <constraint firstItem="42n-rS-BT9" firstAttribute="top" secondItem="7KW-Sz-Y3G" secondAttribute="bottom" constant="69" id="1HK-Ov-eeq"/>
+                            <constraint firstItem="RKi-uJ-kn0" firstAttribute="leading" secondItem="Ahx-dO-C2k" secondAttribute="leading" constant="90" id="36N-uQ-Qa0"/>
+                            <constraint firstItem="7KW-Sz-Y3G" firstAttribute="leading" secondItem="Ahx-dO-C2k" secondAttribute="leading" constant="115" id="5uA-3p-2UC"/>
+                            <constraint firstItem="RKi-uJ-kn0" firstAttribute="top" secondItem="8wk-Wd-dDn" secondAttribute="bottom" constant="49" id="5zT-A4-rgX"/>
+                            <constraint firstItem="Ahx-dO-C2k" firstAttribute="trailing" secondItem="RKi-uJ-kn0" secondAttribute="trailing" constant="90" id="8Dn-gZ-oc9"/>
+                            <constraint firstItem="7KW-Sz-Y3G" firstAttribute="top" secondItem="Ahx-dO-C2k" secondAttribute="top" constant="150" id="NeL-60-D10"/>
+                            <constraint firstItem="8wk-Wd-dDn" firstAttribute="leading" secondItem="Ahx-dO-C2k" secondAttribute="leading" constant="60" id="RDY-Sr-HfF"/>
+                            <constraint firstItem="Ahx-dO-C2k" firstAttribute="trailing" secondItem="7KW-Sz-Y3G" secondAttribute="trailing" constant="115" id="Uwr-V8-hPb"/>
+                            <constraint firstItem="Ahx-dO-C2k" firstAttribute="trailing" secondItem="8wk-Wd-dDn" secondAttribute="trailing" constant="60" id="chd-s9-vOR"/>
+                            <constraint firstItem="8wk-Wd-dDn" firstAttribute="top" secondItem="42n-rS-BT9" secondAttribute="bottom" constant="60" id="e7u-w2-3Sb"/>
+                            <constraint firstItem="42n-rS-BT9" firstAttribute="leading" secondItem="Ahx-dO-C2k" secondAttribute="leading" constant="60" id="gUj-xm-AOG"/>
+                            <constraint firstItem="Ahx-dO-C2k" firstAttribute="trailing" secondItem="UJN-qf-pMT" secondAttribute="trailing" constant="120" id="mbU-ed-4zz"/>
+                            <constraint firstItem="UJN-qf-pMT" firstAttribute="top" secondItem="RKi-uJ-kn0" secondAttribute="bottom" constant="30" id="uqP-rD-gWD"/>
+                            <constraint firstItem="UJN-qf-pMT" firstAttribute="leading" secondItem="Ahx-dO-C2k" secondAttribute="leading" constant="120" id="uxi-KB-as7"/>
+                            <constraint firstItem="Ahx-dO-C2k" firstAttribute="trailing" secondItem="42n-rS-BT9" secondAttribute="trailing" constant="60" id="ypL-NF-6h7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qNE-Xr-iQX"/>
                     <connections>
@@ -181,7 +225,7 @@
         <!--مواعيد هامة-->
         <scene sceneID="1jM-ny-ckA">
             <objects>
-                <viewController id="AEW-CC-fGU" customClass="ImportantDates" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="AEW-CC-fGU" customClass="ImportantDates" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y7O-Px-sqq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,19 +247,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBj-IF-lVt">
-                                <rect key="frame" x="344" y="69" width="34" height="5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="power" catalog="system"/>
-                                <connections>
-                                    <action selector="Signout:" destination="AEW-CC-fGU" eventType="touchUpInside" id="pmS-WT-1Ru"/>
-                                </connections>
-                            </button>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="xyT-dB-LBx">
-                                <rect key="frame" x="0.0" y="49" width="347" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" text="" placeholder="ابحث هنا" translatesAutoresizingMaskIntoConstraints="NO" id="xyT-dB-LBx">
+                                <rect key="frame" x="0.0" y="20" width="414" height="51"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -223,8 +257,11 @@
                         <color key="backgroundColor" name="bgColor"/>
                         <constraints>
                             <constraint firstItem="YTk-tN-SWF" firstAttribute="bottom" secondItem="Z1W-3e-F2x" secondAttribute="bottom" id="3gQ-xQ-96p"/>
-                            <constraint firstItem="Z1W-3e-F2x" firstAttribute="top" secondItem="YTk-tN-SWF" secondAttribute="top" constant="150" id="QjB-PO-71S"/>
+                            <constraint firstItem="xyT-dB-LBx" firstAttribute="trailing" secondItem="YTk-tN-SWF" secondAttribute="trailing" id="Fu5-9Z-2CB"/>
+                            <constraint firstItem="Z1W-3e-F2x" firstAttribute="top" secondItem="YTk-tN-SWF" secondAttribute="top" constant="100" id="QjB-PO-71S"/>
                             <constraint firstItem="YTk-tN-SWF" firstAttribute="trailing" secondItem="Z1W-3e-F2x" secondAttribute="trailing" id="S3D-5f-LRr"/>
+                            <constraint firstItem="xyT-dB-LBx" firstAttribute="leading" secondItem="YTk-tN-SWF" secondAttribute="leading" id="Ycz-UB-HGA"/>
+                            <constraint firstItem="xyT-dB-LBx" firstAttribute="top" secondItem="YTk-tN-SWF" secondAttribute="top" constant="20" id="gaA-gI-QW1"/>
                             <constraint firstItem="Z1W-3e-F2x" firstAttribute="leading" secondItem="YTk-tN-SWF" secondAttribute="leading" id="hAX-8A-IUH"/>
                         </constraints>
                     </view>
@@ -236,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWS-8a-Bl6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="-301"/>
+            <point key="canvasLocation" x="1902.8985507246377" y="-301.33928571428572"/>
         </scene>
         <!--Governmental Jobs-->
         <scene sceneID="4tf-9i-AQf">
@@ -246,27 +283,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tQ1-um-Cmp">
-                                <rect key="frame" x="47" y="69" width="335" height="31"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tQ1-um-Cmp">
+                                <rect key="frame" x="13" y="44" width="389" height="32"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DL5-pr-Ddo"/>
+                                    <constraint firstAttribute="height" constant="40" id="DL5-pr-Ddo"/>
                                 </constraints>
                                 <segments>
                                     <segment title="الكل"/>
                                     <segment title="صحية"/>
                                     <segment title="تعليمية"/>
                                     <segment title="عسكرية"/>
+                                    <segment title="ادارية"/>
                                     <segment title="مالية"/>
                                     <segment title="تقنية"/>
                                 </segments>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="selected:" destination="IEb-tj-ohh" eventType="valueChanged" id="pK8-G7-yQu"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j84-qr-Hay"/>
                         <color key="backgroundColor" name="bgColor"/>
                         <constraints>
                             <constraint firstItem="tQ1-um-Cmp" firstAttribute="top" secondItem="j84-qr-Hay" secondAttribute="top" constant="13" id="3yC-pL-8VE"/>
-                            <constraint firstItem="tQ1-um-Cmp" firstAttribute="leading" secondItem="j84-qr-Hay" secondAttribute="leading" constant="47" id="FWy-XY-aBU"/>
-                            <constraint firstItem="j84-qr-Hay" firstAttribute="trailing" secondItem="tQ1-um-Cmp" secondAttribute="trailing" constant="32" id="MJz-aq-hTv"/>
+                            <constraint firstItem="tQ1-um-Cmp" firstAttribute="leading" secondItem="j84-qr-Hay" secondAttribute="leading" constant="10" id="FWy-XY-aBU"/>
+                            <constraint firstItem="j84-qr-Hay" firstAttribute="trailing" secondItem="tQ1-um-Cmp" secondAttribute="trailing" constant="10" id="MJz-aq-hTv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Ke-nM-gyS"/>
@@ -286,9 +330,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddn-qh-rGt">
-                                <rect key="frame" x="101" y="345" width="223" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddn-qh-rGt">
+                                <rect key="frame" x="90" y="345" width="234" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="hpw-7X-goW"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="استرجاع">
                                     <fontDescription key="titleFontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
@@ -299,22 +345,38 @@
                                     <action selector="ResetPass:" destination="7Mt-DW-4te" eventType="touchUpInside" id="y9C-i6-a2i"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="استرجاع كلمة المرور" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-vv-upJ">
-                                <rect key="frame" x="52" y="224" width="321" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoNaskhArabic-Medium" family="Noto Naskh Arabic" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="استرجاع كلمة المرور" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-vv-upJ">
+                                <rect key="frame" x="62" y="224" width="290" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="1oi-Fm-cIA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="19"/>
+                                <color key="textColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CVP-QU-MOQ">
+                                <rect key="frame" x="-43" y="-31" width="491" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fH3-oK-94N"/>
                         <color key="backgroundColor" name="bgColor"/>
+                        <constraints>
+                            <constraint firstItem="9Uc-vv-upJ" firstAttribute="top" secondItem="fH3-oK-94N" secondAttribute="top" constant="180" id="3M1-wr-O14"/>
+                            <constraint firstItem="fH3-oK-94N" firstAttribute="trailing" secondItem="ddn-qh-rGt" secondAttribute="trailing" constant="90" id="Fk6-4t-DDc"/>
+                            <constraint firstItem="fH3-oK-94N" firstAttribute="trailing" secondItem="9Uc-vv-upJ" secondAttribute="trailing" constant="62" id="Gdw-Kt-mYs"/>
+                            <constraint firstItem="ddn-qh-rGt" firstAttribute="top" secondItem="9Uc-vv-upJ" secondAttribute="bottom" constant="45" id="PkU-MB-uQV"/>
+                            <constraint firstItem="9Uc-vv-upJ" firstAttribute="leading" secondItem="fH3-oK-94N" secondAttribute="leading" constant="62" id="Y9i-eg-lRA"/>
+                            <constraint firstItem="ddn-qh-rGt" firstAttribute="leading" secondItem="fH3-oK-94N" secondAttribute="leading" constant="90" id="arz-tk-Jup"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6OO-fd-Z1d"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lv0-Za-pCp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="7Mt-DW-4te" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1572" y="1339"/>
+            <point key="canvasLocation" x="-894" y="1491"/>
         </scene>
         <!--Create Recruitment Ads-->
         <scene sceneID="2f5-9e-tQk">
@@ -324,53 +386,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-R1-wdo">
-                                <rect key="frame" x="44" y="213" width="318" height="269"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-R1-wdo">
+                                <rect key="frame" x="30" y="157" width="354" height="367"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="367" id="tRC-MU-xwI"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="العنوان" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yz1-JA-eBs">
-                                <rect key="frame" x="44" y="157" width="326" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="العنوان" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yz1-JA-eBs">
+                                <rect key="frame" x="40" y="100" width="334" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="LbW-aI-gd3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="اضافة الاعلان الوظيفي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4T-Qv-xB5">
-                                <rect key="frame" x="113" y="97" width="189" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اضافة الاعلان الوظيفي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4T-Qv-xB5">
+                                <rect key="frame" x="60" y="50" width="294" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="hlQ-h2-BLE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="20"/>
                                 <color key="textColor" red="0.031113255940000001" green="0.053301994149999997" blue="0.23717645200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTg-ZP-UkR">
-                                <rect key="frame" x="291" y="622" width="103" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTg-ZP-UkR">
+                                <rect key="frame" x="185" y="619" width="44" height="34"/>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Mao-a5-X3l">
-                                <rect key="frame" x="77" y="434" width="192" height="38"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="datePicker:" destination="bEj-df-pTi" eventType="valueChanged" id="DSm-SW-toh"/>
-                                </connections>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kK-OG-VhP">
-                                <rect key="frame" x="44" y="648" width="48" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Pull"/>
-                                <connections>
-                                    <action selector="pullImageTapped:" destination="bEj-df-pTi" eventType="touchUpInside" id="IIl-Qy-p3m"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IvV-PR-Nxw">
-                                <rect key="frame" x="35" y="558" width="335" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IvV-PR-Nxw">
+                                <rect key="frame" x="10" y="558" width="394" height="31"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TmF-2R-btN"/>
+                                </constraints>
                                 <segments>
                                     <segment title="الكل"/>
                                     <segment title="صحية"/>
@@ -384,9 +436,11 @@
                                     <action selector="segmentAction:" destination="bEj-df-pTi" eventType="valueChanged" id="g31-Fq-t5l"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-M3-qVI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYS-M3-qVI">
                                 <rect key="frame" x="159" y="715" width="96" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="ACe-Ok-uU7"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="اضافة">
                                     <fontDescription key="titleFontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
@@ -396,13 +450,26 @@
                                     <action selector="addBu:" destination="bEj-df-pTi" eventType="touchUpInside" id="acO-o4-Qkh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GW-Fb-kNj">
-                                <rect key="frame" x="277" y="438" width="44" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.031113255940000001" green="0.053301994149999997" blue="0.23717645200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Mao-a5-X3l">
+                                <rect key="frame" x="82" y="472" width="292" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="ZE0-PO-jSb"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="datePicker:" destination="bEj-df-pTi" eventType="valueChanged" id="DSm-SW-toh"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GW-Fb-kNj">
+                                <rect key="frame" x="167" y="171" width="80" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="5aE-hU-I4V"/>
+                                </constraints>
+                                <color key="tintColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="photo.circle.fill" catalog="system">
-                                    <color key="baseBackgroundColor" red="0.031113255940000001" green="0.053301994149999997" blue="0.23717645200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="filled" image="photo" catalog="system">
+                                    <color key="baseBackgroundColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="getImage:" destination="bEj-df-pTi" eventType="touchUpInside" id="kRg-Wz-0vX"/>
@@ -411,6 +478,36 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fAd-kL-JZ9"/>
                         <color key="backgroundColor" name="bgColor"/>
+                        <constraints>
+                            <constraint firstItem="R4T-Qv-xB5" firstAttribute="leading" secondItem="fAd-kL-JZ9" secondAttribute="leading" constant="60" id="1Fp-PM-knA"/>
+                            <constraint firstItem="IvV-PR-Nxw" firstAttribute="leading" secondItem="fAd-kL-JZ9" secondAttribute="leading" constant="10" id="1YR-HZ-C49"/>
+                            <constraint firstItem="R4T-Qv-xB5" firstAttribute="top" secondItem="fAd-kL-JZ9" secondAttribute="top" constant="50" id="2nV-Tr-aIR"/>
+                            <constraint firstItem="zYS-M3-qVI" firstAttribute="leading" secondItem="fAd-kL-JZ9" secondAttribute="leading" constant="159" id="5aj-Re-7Sn"/>
+                            <constraint firstItem="fAd-kL-JZ9" firstAttribute="trailing" secondItem="Mao-a5-X3l" secondAttribute="trailing" constant="40" id="6P4-6N-qNZ"/>
+                            <constraint firstItem="fAd-kL-JZ9" firstAttribute="trailing" secondItem="yz1-JA-eBs" secondAttribute="trailing" constant="40" id="8vw-HD-7Bm"/>
+                            <constraint firstItem="IvV-PR-Nxw" firstAttribute="top" secondItem="UNN-R1-wdo" secondAttribute="bottom" constant="34" id="E0R-3n-fUI"/>
+                            <constraint firstItem="Mao-a5-X3l" firstAttribute="leading" secondItem="fAd-kL-JZ9" secondAttribute="leading" constant="82" id="Itd-QL-C9v"/>
+                            <constraint firstItem="fAd-kL-JZ9" firstAttribute="trailing" secondItem="UNN-R1-wdo" secondAttribute="trailing" constant="30" id="KfE-F8-6J2"/>
+                            <constraint firstItem="sTg-ZP-UkR" firstAttribute="leading" secondItem="fAd-kL-JZ9" secondAttribute="leading" constant="185" id="LVz-Mo-g2B"/>
+                            <constraint firstItem="yz1-JA-eBs" firstAttribute="leading" secondItem="fAd-kL-JZ9" secondAttribute="leading" constant="40" id="Mpd-my-tYV"/>
+                            <constraint firstItem="UNN-R1-wdo" firstAttribute="centerX" secondItem="sTg-ZP-UkR" secondAttribute="centerX" id="Mz9-zg-s58"/>
+                            <constraint firstItem="fAd-kL-JZ9" firstAttribute="trailing" secondItem="8GW-Fb-kNj" secondAttribute="trailing" constant="167" id="TX9-qM-KLk"/>
+                            <constraint firstItem="fAd-kL-JZ9" firstAttribute="trailing" secondItem="zYS-M3-qVI" secondAttribute="trailing" constant="159" id="VMd-PO-dIS"/>
+                            <constraint firstItem="fAd-kL-JZ9" firstAttribute="trailing" secondItem="R4T-Qv-xB5" secondAttribute="trailing" constant="60" id="WJK-BH-d4a"/>
+                            <constraint firstItem="UNN-R1-wdo" firstAttribute="leading" secondItem="fAd-kL-JZ9" secondAttribute="leading" constant="30" id="WvB-II-kiT"/>
+                            <constraint firstItem="yz1-JA-eBs" firstAttribute="centerX" secondItem="sTg-ZP-UkR" secondAttribute="centerX" id="XBe-Vm-DEf"/>
+                            <constraint firstItem="8GW-Fb-kNj" firstAttribute="top" secondItem="yz1-JA-eBs" secondAttribute="bottom" constant="37" id="XVl-hL-cJh"/>
+                            <constraint firstItem="fAd-kL-JZ9" firstAttribute="trailing" secondItem="IvV-PR-Nxw" secondAttribute="trailing" constant="10" id="Z9D-3b-xsg"/>
+                            <constraint firstItem="sTg-ZP-UkR" firstAttribute="top" secondItem="IvV-PR-Nxw" secondAttribute="bottom" constant="31" id="b1X-my-Rab"/>
+                            <constraint firstItem="8GW-Fb-kNj" firstAttribute="leading" secondItem="fAd-kL-JZ9" secondAttribute="leading" constant="167" id="bQm-yb-yFi"/>
+                            <constraint firstItem="UNN-R1-wdo" firstAttribute="top" secondItem="yz1-JA-eBs" secondAttribute="bottom" constant="23" id="cUx-52-JFg"/>
+                            <constraint firstItem="yz1-JA-eBs" firstAttribute="top" secondItem="R4T-Qv-xB5" secondAttribute="bottom" constant="30" id="h4A-TW-Hzs"/>
+                            <constraint firstItem="fAd-kL-JZ9" firstAttribute="bottom" secondItem="zYS-M3-qVI" secondAttribute="bottom" constant="62" id="mEC-pY-aQs"/>
+                            <constraint firstItem="IvV-PR-Nxw" firstAttribute="top" secondItem="Mao-a5-X3l" secondAttribute="bottom" constant="48" id="ppz-SV-BYB"/>
+                            <constraint firstItem="8GW-Fb-kNj" firstAttribute="centerX" secondItem="sTg-ZP-UkR" secondAttribute="centerX" id="r92-98-Ap0"/>
+                            <constraint firstItem="IvV-PR-Nxw" firstAttribute="centerX" secondItem="sTg-ZP-UkR" secondAttribute="centerX" id="tyk-NQ-MfX"/>
+                            <constraint firstItem="zYS-M3-qVI" firstAttribute="top" secondItem="sTg-ZP-UkR" secondAttribute="bottom" constant="62" id="x4O-Jh-S6d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CQp-Du-bZH"/>
                     <connections>
@@ -426,46 +523,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0L-R1-bf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-36.231884057971016" y="418.52678571428572"/>
-        </scene>
-        <!--Test Class-->
-        <scene sceneID="e9r-zo-YYn">
-            <objects>
-                <viewController id="0BC-zD-NBv" customClass="TestClass" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6vJ-IS-dbf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qWL-Tf-kk0">
-                                <rect key="frame" x="141.5" y="77" width="131" height="32"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgo-OB-cXL">
-                                <rect key="frame" x="174" y="308" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="actionSelected:" destination="0BC-zD-NBv" eventType="touchUpInside" id="SMV-YF-trf"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="RBZ-oI-gLa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="qWL-Tf-kk0" firstAttribute="centerX" secondItem="RBZ-oI-gLa" secondAttribute="centerX" id="Ekv-0q-FTe"/>
-                            <constraint firstItem="qWL-Tf-kk0" firstAttribute="top" secondItem="RBZ-oI-gLa" secondAttribute="top" constant="33" id="NcY-UR-5C8"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="segmentTest" destination="qWL-Tf-kk0" id="WMe-Cn-ebv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VuS-QS-kPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="470" y="1964"/>
         </scene>
         <!--DetailsVC-->
         <scene sceneID="VVr-fu-EC3">
@@ -501,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWd-e9-ADw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="1102"/>
+            <point key="canvasLocation" x="2570" y="1094"/>
         </scene>
         <!--My Ads-->
         <scene sceneID="TeB-vV-dnz">
@@ -510,64 +567,49 @@
                     <view key="view" contentMode="scaleToFill" id="dl2-rH-50f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJw-nI-WB5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اعلاناتي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEy-1U-4Rk">
+                                        <rect key="frame" x="144" y="43" width="126" height="31"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="31"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" red="0.031113255940000001" green="0.053301994149999997" blue="0.23717645200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eid-bv-Dh0">
+                                        <rect key="frame" x="341" y="52" width="34" height="5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="power" catalog="system"/>
+                                        <connections>
+                                            <action selector="Signout:" destination="AEW-CC-fGU" eventType="touchUpInside" id="27U-C3-Cux"/>
+                                            <action selector="Signout:" destination="e9o-v3-gnT" eventType="touchUpInside" id="A9h-01-KWm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.52549022440000004" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="yEy-1U-4Rk" firstAttribute="leading" secondItem="tJw-nI-WB5" secondAttribute="leading" constant="144" id="B0T-4W-tqW"/>
+                                    <constraint firstAttribute="trailing" secondItem="yEy-1U-4Rk" secondAttribute="trailing" constant="144" id="OKc-LU-CQW"/>
+                                    <constraint firstAttribute="height" constant="186" id="Vcg-Tr-NB5"/>
+                                    <constraint firstItem="yEy-1U-4Rk" firstAttribute="top" secondItem="tJw-nI-WB5" secondAttribute="top" constant="43" id="tGb-qw-bLp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wbc-bd-IdU"/>
                         <color key="backgroundColor" name="bgColor"/>
+                        <constraints>
+                            <constraint firstItem="tJw-nI-WB5" firstAttribute="leading" secondItem="wbc-bd-IdU" secondAttribute="leading" id="JSY-3t-4fP"/>
+                            <constraint firstItem="tJw-nI-WB5" firstAttribute="trailing" secondItem="wbc-bd-IdU" secondAttribute="trailing" id="on5-H9-QU4"/>
+                            <constraint firstItem="tJw-nI-WB5" firstAttribute="top" secondItem="dl2-rH-50f" secondAttribute="top" id="owG-iJ-Yuf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgH-Jd-wOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4046.376811594203" y="806.91964285714278"/>
-        </scene>
-        <!--القطاع الخاص-->
-        <scene sceneID="xnn-U5-RwN">
-            <objects>
-                <viewController id="RI8-Ag-V86" customClass="PrivateSectorJobs" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="me5-ZC-pFw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="وظائف القطاع الخاص" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="web-eb-y5o">
-                                <rect key="frame" x="47" y="112" width="321" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoNaskhArabic-Medium" family="Noto Naskh Arabic" pointSize="23"/>
-                                <color key="textColor" red="0.031113255940000001" green="0.053301994149999997" blue="0.23717645200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-sV-wRc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="kKX-Xr-qMR"/>
-                        <color key="backgroundColor" name="bgColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="القطاع الخاص" image="person.3" catalog="system" id="7G7-r0-POa"/>
-                    <connections>
-                        <outlet property="searchBar" destination="FsJ-sV-wRc" id="XaM-mj-ao9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SJe-c4-rBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="992.75362318840587" y="-694.41964285714278"/>
-        </scene>
-        <!--Lunch Screen-->
-        <scene sceneID="eaH-y9-X4y">
-            <objects>
-                <viewController id="RJA-py-CJZ" customClass="LunchScreen" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HGX-EY-cxa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8pg-iZ-LTY"/>
-                        <color key="backgroundColor" name="bgColor"/>
-                    </view>
-                    <connections>
-                        <segue destination="ydr-d2-Jom" kind="custom" id="5d9-aT-gjb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FCI-Md-vTW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2845" y="-74"/>
+            <point key="canvasLocation" x="4956.521739130435" y="806.91964285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cTl-0I-psD">
@@ -577,9 +619,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gof-QM-a8G">
-                                <rect key="frame" x="49" y="731" width="317" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gof-QM-a8G">
+                                <rect key="frame" x="49" y="733" width="316" height="29"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ابدأ" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
@@ -590,9 +631,11 @@
                                     <segue destination="bFQ-qY-Gri" kind="show" id="MsV-1J-aYg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9H6-AV-wXj">
-                                <rect key="frame" x="49" y="770" width="317" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9H6-AV-wXj">
+                                <rect key="frame" x="49" y="770" width="316" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="1aZ-9R-IyM"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="هل تريد إنشاء اعلان وظيفي ؟ اضغط هنا" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
@@ -603,27 +646,37 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="oby-qe-Ym8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="سنساعدك بالبحث عن وظائف متنوعه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jY0-Ox-8fb">
-                                <rect key="frame" x="77" y="416" width="247" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Tajawal-ExtraLight" family="Tajawal" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="أهلاً بك في تطبيق وظائف" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGb-FS-03z">
-                                <rect key="frame" x="49" y="338" width="321" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="whC-Tk-VmL">
-                                <rect key="frame" x="103" y="147" width="200" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q9I-xM-bAi">
+                                <rect key="frame" x="20" y="313" width="374" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أهلاً بك في تطبيق وظائف" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGb-FS-03z">
+                                        <rect key="frame" x="29" y="0.0" width="316" height="30"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سنساعدك بالبحث عن وظائف متنوعه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jY0-Ox-8fb">
+                                        <rect key="frame" x="64" y="30" width="246.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-ExtraLight" family="Tajawal" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NSs-jN-2yM"/>
                         <color key="backgroundColor" name="bgColor"/>
+                        <constraints>
+                            <constraint firstItem="9H6-AV-wXj" firstAttribute="leading" secondItem="NSs-jN-2yM" secondAttribute="leading" constant="49" id="5cq-n9-KsN"/>
+                            <constraint firstItem="q9I-xM-bAi" firstAttribute="top" secondItem="0VU-hh-mLL" secondAttribute="top" constant="313" id="9XB-2r-YDg"/>
+                            <constraint firstItem="q9I-xM-bAi" firstAttribute="centerX" secondItem="Gof-QM-a8G" secondAttribute="centerX" id="ALD-on-fqp"/>
+                            <constraint firstItem="q9I-xM-bAi" firstAttribute="trailing" secondItem="0VU-hh-mLL" secondAttribute="trailingMargin" id="XcM-Yn-5LV"/>
+                            <constraint firstItem="9H6-AV-wXj" firstAttribute="top" secondItem="Gof-QM-a8G" secondAttribute="bottom" constant="8" symbolic="YES" id="gBR-rJ-MMO"/>
+                            <constraint firstItem="q9I-xM-bAi" firstAttribute="leading" secondItem="0VU-hh-mLL" secondAttribute="leadingMargin" id="j8B-Sm-x9z"/>
+                            <constraint firstItem="NSs-jN-2yM" firstAttribute="bottom" secondItem="9H6-AV-wXj" secondAttribute="bottom" constant="61" id="jUT-uh-Dn2"/>
+                            <constraint firstItem="q9I-xM-bAi" firstAttribute="centerX" secondItem="9H6-AV-wXj" secondAttribute="centerX" id="qa2-iM-VOH"/>
+                            <constraint firstItem="9H6-AV-wXj" firstAttribute="leading" secondItem="Gof-QM-a8G" secondAttribute="leading" id="rfY-Pj-X20"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SkL-pw-pPa"/>
                     <connections>
@@ -637,7 +690,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="HdX-WH-Axz">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bFQ-qY-Gri" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="bFQ-qY-Gri" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ew7-r7-8LK"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BS4-Sc-zmk">
@@ -648,7 +701,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="YCC-2a-nBe" kind="relationship" relationship="viewControllers" id="57G-BA-EMY"/>
-                        <segue destination="RI8-Ag-V86" kind="relationship" relationship="viewControllers" id="pDv-Mw-9Bj"/>
                         <segue destination="AEW-CC-fGU" kind="relationship" relationship="viewControllers" id="n9E-rQ-vf1"/>
                     </connections>
                 </tabBarController>
@@ -656,12 +708,11 @@
             </objects>
             <point key="canvasLocation" x="152" y="-301"/>
         </scene>
-        <!--Item-->
+        <!--الوظائف-->
         <scene sceneID="Hg3-3d-Bpa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="njn-vZ-Etr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YCC-2a-nBe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5yO-fo-ivo"/>
+                    <tabBarItem key="tabBarItem" title="الوظائف" selectedImage="bag.circle.fill" catalog="system" id="5yO-fo-ivo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WTW-Ui-TaV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -672,24 +723,27 @@
                         <segue destination="IEb-tj-ohh" kind="relationship" relationship="rootViewController" id="0lf-DN-E68"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njn-vZ-Etr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1679.7101449275362" y="418.52678571428572"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="N95-hq-83z"/>
+        <segue reference="MsV-1J-aYg"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="bag.circle.fill" catalog="system" width="128" height="121"/>
         <image name="doc.on.clipboard.fill" catalog="system" width="116" height="128"/>
-        <image name="logo" width="420" height="420"/>
-        <image name="person.3" catalog="system" width="128" height="62"/>
-        <image name="photo.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="power" catalog="system" width="128" height="124"/>
         <namedColor name="bgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
