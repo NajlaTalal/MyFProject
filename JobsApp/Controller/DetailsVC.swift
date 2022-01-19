@@ -4,7 +4,6 @@
 //
 //  Created by Najla Talal on 1/11/22.
 //
-
 import UIKit
 
 class DetailsVC: UIViewController {
@@ -35,4 +34,3 @@ class DetailsVC: UIViewController {
     
     
 }
-

@@ -37,6 +37,7 @@ class GovernmentalJobs: UIViewController {
         super.loadView()
         segmentedControl.selectedSegmentIndex = 0
         
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(collectionView)
@@ -66,25 +67,24 @@ class GovernmentalJobs: UIViewController {
         dateToSring()
         
     }
-
+    
     
     //MARK: -  Read From Data Firebase
     
     func readdata() {
-        db.collection("RecruitmentAdv")
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    self.hr.removeAll()
-                    for document in querySnapshot!.documents {
-                        let data = document.data()
-                        self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: data["imageURL"] as? String ?? "", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? ""))
-                        print(self.hr)
-                    }
-                    self.collectionView.reloadData()
+        db.collection("RecruitmentAdv").order(by: "dateOfRAds", descending: true).addSnapshotListener{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.hr.removeAll()
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: data["imageURL"] as? String ?? "", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? ""))
+                    print(self.hr)
                 }
+                self.collectionView.reloadData()
             }
+        }
     }
     
     
@@ -97,13 +97,13 @@ class GovernmentalJobs: UIViewController {
                 } else {
                     self.hr.removeAll()
                     for document in querySnapshot!.documents {
-                         let data = document.data()
+                        let data = document.data()
                         guard  data.isEmpty != true else {return print("No data from firebase")}
                         self.hr.append(RAds(title: data["title"] as? String ?? "title", Images:"images", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? ""))
                         print(self.hr)
                     }
                     self.collectionView.reloadData()
-
+                    
                     
                 }
             }
@@ -117,9 +117,9 @@ extension GovernmentalJobs: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "DetailsVC") as? DetailsVC{
-            vc.titleAd = hr[indexPath.row].title ?? ""
-            vc.details = hr[indexPath.row].RecruitmentAds ?? ""
-            self.navigationController?.pushViewController(vc, animated: true)
+                  vc.titleAd = hr[indexPath.row].title ?? ""
+                  vc.details = hr[indexPath.row].RecruitmentAds ?? ""
+                  self.navigationController?.pushViewController(vc, animated: true)
         }
         
         //MARK: - Alert sound
@@ -140,6 +140,7 @@ extension GovernmentalJobs: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! GovJobsCell
+        
         cell.titleLabel.text = hr[indexPath.row].title
         cell.recAdsLabel.text = hr[indexPath.row].RecruitmentAds
         cell.startLabel.text = hr[indexPath.row].startDate
@@ -150,7 +151,7 @@ extension GovernmentalJobs: UICollectionViewDataSource {
                 cell.imageAds.image = UIImage(data: data )
             }
         }
-       
+        
         
         cell.ShareButton.addTarget(self, action: #selector(presentShareSheet(_:)), for: .touchUpInside)
         cell.ShareButton.tintColor = .gray
@@ -160,7 +161,7 @@ extension GovernmentalJobs: UICollectionViewDataSource {
         cell.layer.borderWidth = 1
         cell.layer.borderColor = #colorLiteral(red: 0.09203992039, green: 0.5343717337, blue: 0.6424081922, alpha: 1)
         cell.layer.cornerRadius = 10
-        cell.backgroundColor = #colorLiteral(red: 0.0257745944, green: 0.05412763357, blue: 0.2478517592, alpha: 1)
+        cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         return cell
     }
@@ -188,36 +189,10 @@ extension GovernmentalJobs: UICollectionViewDataSource {
     
     
     
-    //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    //        guard let userPickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {return}
-    //        guard let d: Data = userPickedImage.jpegData(compressionQuality: 0.5) else { return }
-    //        guard let currentUser = Auth.auth().currentUser else {return}
-    //        let metadata = StorageMetadata()
-    //        metadata.contentType = "image/png"
-    //        let ref = storage.reference().child("UserImages/\(currentUser.email!)/\(currentUser.uid)/\(UUID()).jpg")
-    //        ref.putData(d, metadata: metadata) { (metadata, error) in
-    //            if error == nil {
-    //                ref.downloadURL(completion: { (url, error) in
-    //                    self.imageUrl = "\(url!)"
-    //                })
-    //            }else{
-    //                print("error \(String(describing: error))")
-    //            }
-    //        }
-    //        picker.dismiss(animated: true, completion: nil)
-    //    }
+    
     
 }
-//
-//extension ViewController: UICollectionViewDelegate {
-//
-//    //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//    //                let select = hr[indexPath.row]
-//    //                let details = DetailsVC()
-//    //        details.hr = select
-//    //
-//    //    }
-//}
+
 
 //MARK: - extension of collectionView
 

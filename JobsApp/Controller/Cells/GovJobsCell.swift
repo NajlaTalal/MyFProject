@@ -14,11 +14,11 @@ class GovJobsCell: UICollectionViewCell {
     
     //MARK: - lets
     
-    let titleLabel = UILabel(frame: CGRect(x: 100, y: 30,  width: 250 , height: 30 ))
-    let recAdsLabel = UILabel(frame: CGRect(x: 100, y: 50,  width: 250 , height: 30 ))
+    let titleLabel = UILabel(frame: CGRect(x: 40, y: 50,  width: 250 , height: 30 ))
+    let recAdsLabel = UILabel(frame: CGRect(x: 40, y: 70,  width: 250 , height: 30 ))
     let dateOfRAdsLabel = UILabel(frame: CGRect(x: 10, y: 5,  width: 250 , height: 30 ))
-    let startLabel =  UILabel(frame: CGRect(x: 50, y: 100,  width: 250 , height: 30 ))
-    let imageAds =  UIImageView(frame: CGRect(x: 50, y: 50,  width: 50 , height: 30 ))
+    let startLabel =  UILabel(frame: CGRect(x: 150, y: 100,  width: 250 , height: 30 ))
+    let imageAds =  UIImageView(frame: CGRect(x: 300, y: 50,  width: 50 , height: 50 ))
     //MARK: - ShareButton
     
     let ShareButton: UIButton = {
@@ -46,7 +46,7 @@ class GovJobsCell: UICollectionViewCell {
         ])
         
         
-        self.contentView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+//        self.contentView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         //MARK: - Subviews
         
@@ -68,11 +68,16 @@ class GovJobsCell: UICollectionViewCell {
         recAdsLabel.textColor = #colorLiteral(red: 0.0257745944, green: 0.05412763357, blue: 0.2478517592, alpha: 1)
         dateOfRAdsLabel.textAlignment = .left
         dateOfRAdsLabel.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        startLabel.textColor = #colorLiteral(red: 0.0257745944, green: 0.05412763357, blue: 0.2478517592, alpha: 1)
+        startLabel.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         
-        ShareButton.frame = CGRect(x: 10, y: 80, width: 20, height: 60)
+        ShareButton.frame = CGRect(x: 20, y: 110, width: 20, height: 60)
         ShareButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
+        imageAds.layer.borderWidth = 1
+        imageAds.layer.masksToBounds = false
+        imageAds.layer.borderColor = #colorLiteral(red: 0.09203992039, green: 0.5343717337, blue: 0.6424081922, alpha: 1)
+        imageAds.layer.cornerRadius = imageAds.frame.height/2
+        imageAds.clipsToBounds = true
         
     }
     

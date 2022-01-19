@@ -14,6 +14,8 @@
 		B311E535278920D0008F8689 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B311E534278920D0008F8689 /* Lottie */; };
 		B31595B72784361400F6A320 /* StructRecruitmentAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31595B62784361400F6A320 /* StructRecruitmentAds.swift */; };
 		B31A563527923B8800A68D08 /* btn_click_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = B31A563427923B8800A68D08 /* btn_click_sound.wav */; };
+		B31CC8772796DF8A0051A77E /* MyAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CC8762796DF8A0051A77E /* MyAds.swift */; };
+		B31CC879279711140051A77E /* MyAdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CC878279711140051A77E /* MyAdsCell.swift */; };
 		B33960522782E30700C5963B /* GovJobsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33960512782E30600C5963B /* GovJobsCell.swift */; };
 		B33960542782E80E00C5963B /* GovernmentalJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33960532782E80E00C5963B /* GovernmentalJobs.swift */; };
 		B33DF9E92781C43200685BDF /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DF9E82781C43200685BDF /* ForgotPasswordVC.swift */; };
@@ -65,6 +67,8 @@
 		B311E53127891ED1008F8689 /* lf20_uqpfhc4y.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf20_uqpfhc4y.json; sourceTree = "<group>"; };
 		B31595B62784361400F6A320 /* StructRecruitmentAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructRecruitmentAds.swift; sourceTree = "<group>"; };
 		B31A563427923B8800A68D08 /* btn_click_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn_click_sound.wav; sourceTree = "<group>"; };
+		B31CC8762796DF8A0051A77E /* MyAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAds.swift; sourceTree = "<group>"; };
+		B31CC878279711140051A77E /* MyAdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAdsCell.swift; sourceTree = "<group>"; };
 		B33960512782E30600C5963B /* GovJobsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovJobsCell.swift; sourceTree = "<group>"; };
 		B33960532782E80E00C5963B /* GovernmentalJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovernmentalJobs.swift; sourceTree = "<group>"; };
 		B33DF9E82781C43200685BDF /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				B33960532782E80E00C5963B /* GovernmentalJobs.swift */,
+				B31CC8762796DF8A0051A77E /* MyAds.swift */,
 				B3018029278DD5F800104588 /* DetailsVC.swift */,
 				B311E52F27891E17008F8689 /* LunchScreen.swift */,
 				B37A0D792785CE2A006A398F /* Dates.swift */,
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				B33960512782E30600C5963B /* GovJobsCell.swift */,
+				B31CC878279711140051A77E /* MyAdsCell.swift */,
 				B3DB45A127818DBC0018055A /* ImpDatesCell.swift */,
 			);
 			path = Cells;
@@ -371,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31CC8772796DF8A0051A77E /* MyAds.swift in Sources */,
 				B375DFA827821C8F0084D555 /* Struct.swift in Sources */,
 				B3888E972780A72500009493 /* SignUpVC.swift in Sources */,
 				B33960522782E30700C5963B /* GovJobsCell.swift in Sources */,
@@ -378,6 +385,7 @@
 				B33DF9F02781DBAF00685BDF /* Login.swift in Sources */,
 				B33DF9E92781C43200685BDF /* ForgotPasswordVC.swift in Sources */,
 				B311E53027891E17008F8689 /* LunchScreen.swift in Sources */,
+				B31CC879279711140051A77E /* MyAdsCell.swift in Sources */,
 				B3888E6727806D8200009493 /* ViewController.swift in Sources */,
 				B33960542782E80E00C5963B /* GovernmentalJobs.swift in Sources */,
 				B33DF9EE2781C60200685BDF /* PrivateSectorJobs.swift in Sources */,

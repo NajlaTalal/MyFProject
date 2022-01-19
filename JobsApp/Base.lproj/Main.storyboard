@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bEj-df-pTi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ydr-d2-Jom">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,7 +85,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="xXD-xd-mAb"/>
                     <connections>
@@ -163,7 +164,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ahx-dO-C2k"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qNE-Xr-iQX"/>
                     <connections>
@@ -198,7 +199,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="bgColor"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -219,7 +220,7 @@
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YTk-tN-SWF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                         <constraints>
                             <constraint firstItem="YTk-tN-SWF" firstAttribute="bottom" secondItem="Z1W-3e-F2x" secondAttribute="bottom" id="3gQ-xQ-96p"/>
                             <constraint firstItem="Z1W-3e-F2x" firstAttribute="top" secondItem="YTk-tN-SWF" secondAttribute="top" constant="150" id="QjB-PO-71S"/>
@@ -237,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="1903" y="-301"/>
         </scene>
-        <!--Item-->
+        <!--Governmental Jobs-->
         <scene sceneID="4tf-9i-AQf">
             <objects>
                 <viewController storyboardIdentifier="GovernmentalJobs" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IEb-tj-ohh" customClass="GovernmentalJobs" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -246,7 +247,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tQ1-um-Cmp">
-                                <rect key="frame" x="47" y="13" width="335" height="31"/>
+                                <rect key="frame" x="47" y="69" width="335" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DL5-pr-Ddo"/>
                                 </constraints>
@@ -261,14 +262,13 @@
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j84-qr-Hay"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                         <constraints>
                             <constraint firstItem="tQ1-um-Cmp" firstAttribute="top" secondItem="j84-qr-Hay" secondAttribute="top" constant="13" id="3yC-pL-8VE"/>
                             <constraint firstItem="tQ1-um-Cmp" firstAttribute="leading" secondItem="j84-qr-Hay" secondAttribute="leading" constant="47" id="FWy-XY-aBU"/>
                             <constraint firstItem="j84-qr-Hay" firstAttribute="trailing" secondItem="tQ1-um-Cmp" secondAttribute="trailing" constant="32" id="MJz-aq-hTv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="5yO-fo-ivo"/>
                     <navigationItem key="navigationItem" id="5Ke-nM-gyS"/>
                     <connections>
                         <outlet property="segmentedControl" destination="tQ1-um-Cmp" id="QQq-qY-R2U"/>
@@ -276,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLl-WI-mYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="419"/>
+            <point key="canvasLocation" x="2589.8550724637685" y="418.52678571428572"/>
         </scene>
         <!--Forgot PasswordVC-->
         <scene sceneID="Z5D-Fv-TUG">
@@ -308,7 +308,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fH3-oK-94N"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lv0-Za-pCp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -410,7 +410,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fAd-kL-JZ9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="CQp-Du-bZH"/>
                     <connections>
@@ -451,7 +451,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PLR-RH-SUw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="jEF-vb-b0U"/>
                     <connections>
@@ -462,6 +462,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWd-e9-ADw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1903" y="1102"/>
+        </scene>
+        <!--My Ads-->
+        <scene sceneID="TeB-vV-dnz">
+            <objects>
+                <viewController id="e9o-v3-gnT" customClass="MyAds" customModule="JobsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dl2-rH-50f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wbc-bd-IdU"/>
+                        <color key="backgroundColor" name="bgColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AgH-Jd-wOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4046.376811594203" y="806.91964285714278"/>
         </scene>
         <!--القطاع الخاص-->
         <scene sceneID="xnn-U5-RwN">
@@ -485,7 +500,7 @@
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kKX-Xr-qMR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="القطاع الخاص" image="person.3" catalog="system" id="7G7-r0-POa"/>
                     <connections>
@@ -504,7 +519,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="8pg-iZ-LTY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                     </view>
                     <connections>
                         <segue destination="ydr-d2-Jom" kind="custom" id="5d9-aT-gjb"/>
@@ -568,7 +583,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NSs-jN-2yM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bgColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="SkL-pw-pPa"/>
                     <connections>
@@ -592,14 +607,33 @@
                         <color key="selectedImageTintColor" red="0.031113255940000001" green="0.053301994149999997" blue="0.23717645200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
+                        <segue destination="YCC-2a-nBe" kind="relationship" relationship="viewControllers" id="57G-BA-EMY"/>
                         <segue destination="RI8-Ag-V86" kind="relationship" relationship="viewControllers" id="pDv-Mw-9Bj"/>
                         <segue destination="AEW-CC-fGU" kind="relationship" relationship="viewControllers" id="n9E-rQ-vf1"/>
-                        <segue destination="IEb-tj-ohh" kind="relationship" relationship="viewControllers" id="57G-BA-EMY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgF-cQ-nt1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="152" y="-301"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Hg3-3d-Bpa">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njn-vZ-Etr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YCC-2a-nBe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5yO-fo-ivo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WTW-Ui-TaV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IEb-tj-ohh" kind="relationship" relationship="rootViewController" id="0lf-DN-E68"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1679.7101449275362" y="418.52678571428572"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -611,6 +645,9 @@
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="photo.circle.fill" catalog="system" width="128" height="121"/>
         <image name="power" catalog="system" width="128" height="124"/>
+        <namedColor name="bgColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -618,9 +655,6 @@
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

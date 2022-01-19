@@ -102,10 +102,10 @@ class ImportantDates: UIViewController, UITableViewDataSource, UITableViewDelega
         var separatorLineView = UIView(frame: CGRect(x: 20, y: 20, width: cell.frame.size.width, height:  cell.frame.size.height))
                
         cell.contentView.addSubview(separatorLineView)
-        cell.contentView.backgroundColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
+//        cell.contentView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         cell.contentView.tintColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
         cell.textLabel!.textAlignment = .right
-        cell.textLabel!.textColor = .white
+//        cell.textLabel!.textColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
         cell.textLabel!.font = UIFont(name: "Tajawal-Medium", size: 20)
         cell.textLabel!.numberOfLines = 6
         cell.layer.shadowColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)

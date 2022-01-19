@@ -39,11 +39,12 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.modalPresentationStyle = .fullScreen
+//        self.modalPresentationStyle = .fullScreen
         segmentLabel.removeAllSegments()
         for x in 0..<arrayCat.count {
             print(x)
             segmentLabel.insertSegment(withTitle: arrayCat[x], at: x, animated: true)
+            
         }
         catSelected = segmentLabel.selectedSegmentIndex
         date = dateToSring()
@@ -56,7 +57,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func datePicker(_ sender: Any) {
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd "
         let pick = dateFormatter.string(from: datePickerbu.date)
         date = pick
         
@@ -79,6 +80,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
         
         // here call upload image
         //        uploadToCloud(fileURL: URL)
+        print("taraf")
         guard imageSendFiresbase != nil else {return }  // here you can ad alert to show user upload data
         uploadToCloud(image: imageSendFiresbase!)
         
@@ -162,7 +164,8 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
                                                     "dateOfRAds": DateNow,
                                                     "startDate":  self.date,
                                                     "imageURL": "\(url!)",
-                                                    "categories": self.arrayCat[self.catSelected]
+                                                    "categories": self.arrayCat[self.catSelected],
+                                                    "emailUser": Auth.auth().currentUser?.email
                                                   ])
                             
                             
