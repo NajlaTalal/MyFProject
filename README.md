@@ -43,6 +43,14 @@ Firebase packages and AVFoundation .
 <img width="361" alt="Screen Shot 2022-01-20 at 6 55 40 PM" src="https://user-images.githubusercontent.com/92252816/150381998-f3803bd7-84b9-4dab-ae8c-6734a3a71599.png">
 
 
+# Tools :
+
+Notion - Figma
+
+# Resourses :
+
+https://firebase.google.com/docs/reference
+
 # Features in future :
 
 Job seekers can create cv in jobs app .
