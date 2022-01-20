@@ -19,7 +19,7 @@ class Login: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-  
+    
     //MARK: -  ViewDidload
     
     override func viewDidLoad() {
@@ -40,8 +40,8 @@ class Login: UIViewController {
                 self.performSegue(withIdentifier: "move", sender: nil)
             }else{
                 print("error",error?.localizedDescription)
-                let alert = UIAlertController(title: "تنبيه ", message: "البريد الألكتروني او كلمة المرور خطأ ، أعد المحاولة", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+                let alert = UIAlertController(title: "تنبيه ", message: "البريد الإلكتروني أو كلمة المرور خطأ ", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "حاول مجدداً", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
             
@@ -55,13 +55,13 @@ class Login: UIViewController {
             }
         }
         
-      
+        
     }
-   
+    
     @IBAction func resetPass(_ sender: Any) {
-    
-    
-}
+        
+        
+    }
 }
 //MARK: -  Extension TextField
 

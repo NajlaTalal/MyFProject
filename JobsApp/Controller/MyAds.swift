@@ -8,8 +8,8 @@
 import UIKit
 import Firebase
 class MyAds: UIViewController {
-
-  
+    
+    
     let firestoreURL = Firestore.firestore()
     let username = Auth.auth().currentUser?.displayName
     let now = Date()
@@ -56,14 +56,14 @@ class MyAds: UIViewController {
     func readdata() {
         db.collection("RecruitmentAdv").whereField("emailUser",isEqualTo: Auth.auth().currentUser?.email!  ).addSnapshotListener{(querySnapshot, error) in
             if let err = error {
-                      print("Error getting documents: \(err.localizedDescription)")
-                  } else {
-                      self.hr.removeAll()
-                      for document in querySnapshot!.documents {
-                          let data = document.data()
-                 
-                          self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: data["imageURL"] as? String ?? "", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? "", idAdv: data["idAdv"] as? String ?? "" ))
-                       
+                print("Error getting documents: \(err.localizedDescription)")
+            } else {
+                self.hr.removeAll()
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    
+                    self.hr.append(RAds(title: data["title"] as? String ?? "title", Images: data["imageURL"] as? String ?? "", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? "", idAdv: data["idAdv"] as? String ?? "" ))
+                    
                     print(self.hr)
                 }
                 self.myAdsCollectionView.reloadData()
@@ -125,40 +125,40 @@ extension MyAds: UICollectionViewDataSource {
                 cell.imageAds.image = UIImage(data: data )
             }
         }
-     
+        
         return cell
     }
     
-
+    
     @objc func delete(sender: UIButton!) {
         
-          let alert = UIAlertController(title: "تنبية" , message: "هل تريد حذف الاعلان ؟", preferredStyle: .alert)
-           
-          let action = UIAlertAction(title: "نعم", style: .default) { action in
-             
-              self.db.collection("RecruitmentAdv").document(self.idProject).delete() { err in
-              if let err = err {
-                print("Error removing document: \(err.localizedDescription)")
-              } else {
-                 
-                self.navigationController?.popViewController(animated: true)
-              }
+        let alert = UIAlertController(title: "تنبية" , message: "هل تريد حذف الاعلان ؟", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "نعم", style: .default) { action in
+            
+            self.db.collection("RecruitmentAdv").document(self.idProject).delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err.localizedDescription)")
+                } else {
+                    
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
-          }
-          alert.addAction(action)
-          alert.addAction(UIAlertAction(title: "الغاء", style: .cancel , handler: nil ))
-          present(alert, animated: true , completion: nil)
-           
+        }
+        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "الغاء", style: .cancel , handler: nil ))
+        present(alert, animated: true , completion: nil)
+        
     }
     
-    }
-    
-    
-    
-    
-    
- 
-    
+}
+
+
+
+
+
+
+
 
 //MARK: - extension of collectionView
 
@@ -193,6 +193,6 @@ extension MyAds: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets.init(top:15, left: 8, bottom: 0, right: 8)
     }
     
-   
+    
 }
 

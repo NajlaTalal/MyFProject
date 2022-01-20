@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-import SwiftUI
+
 import FirebaseStorage
 import AVFoundation
 
@@ -26,8 +26,11 @@ class GovernmentalJobs: UIViewController {
     let sound = URL(fileURLWithPath: Bundle.main.path(forResource: "btn_click_sound", ofType: "wav")!)
     var audioPlayer = AVAudioPlayer()
     var imageUrl : String = ""
+    
+    @IBOutlet weak var myAdsButton: UIButton!
     weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var myAds: UIButton!
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -60,8 +63,9 @@ class GovernmentalJobs: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.register(GovJobsCell.self, forCellWithReuseIdentifier: "MyCell")
-    
-
+        
+     
+        
         readdata()
         pastDate.timeAgoDisplay()
         dateToSring()
@@ -75,7 +79,7 @@ class GovernmentalJobs: UIViewController {
         case 0 :
             readdata()
         case 1 :
-        filter(categories: "صحية")
+            filter(categories: "صحية")
         case 2 :
             filter(categories: "تعليمية")
         case 3 :
@@ -86,7 +90,7 @@ class GovernmentalJobs: UIViewController {
             filter(categories: "مالية")
         case 6 :
             filter(categories: "تقنية")
-    
+            
             
         default :
             filter(categories: "الكل")
@@ -141,9 +145,10 @@ extension GovernmentalJobs: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "DetailsVC") as? DetailsVC{
-                  vc.titleAd = hr[indexPath.row].title ?? ""
-                  vc.details = hr[indexPath.row].RecruitmentAds ?? ""
-                  self.navigationController?.pushViewController(vc, animated: true)
+            vc.titleAd = hr[indexPath.row].title ?? ""
+            vc.details = hr[indexPath.row].RecruitmentAds ?? ""
+            vc.datelab = hr[indexPath.row].startDate ?? ""
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
         //MARK: - Alert sound
@@ -213,34 +218,34 @@ extension GovernmentalJobs: UICollectionViewDataSource {
     
     
     func filter(categories : String ){
-         hr.removeAll()
-            db.collection("RecruitmentAdv").whereField( "categories", isEqualTo:  categories ).addSnapshotListener{(querySnapshot, error) in
+        hr.removeAll()
+        db.collection("RecruitmentAdv").whereField( "categories", isEqualTo:  categories ).addSnapshotListener{(querySnapshot, error) in
+            
+            if let err = error {
+                print("Error getting documents: \(err.localizedDescription)")
                 
-                if let err = error {
-                    print("Error getting documents: \(err.localizedDescription)")
+                
+                
+            } else {
+                self.hr.removeAll()
+                for document in querySnapshot!.documents {
                     
-                 
+                    let data = document.data()
+                    guard  data.isEmpty != true else {return print("No data from firebase")}
+                    self.hr.append(RAds(title: data["title"] as? String ?? "title", Images:"images", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? "", idAdv: data["idAdv"] as? String ?? ""))
                     
-                } else {
-                    self.hr.removeAll()
-                    for document in querySnapshot!.documents {
-                    
-                        let data = document.data()
-                        guard  data.isEmpty != true else {return print("No data from firebase")}
-                        self.hr.append(RAds(title: data["title"] as? String ?? "title", Images:"images", RecritmentAds: data["RecruitmentAdv"] as? String ?? "" ,categories: "categories", dateOfRAds: data["dateOfRAds"] as? String ?? "", startDate: data["startDate"] as? String ?? "", idAdv: data["idAdv"] as? String ?? ""))
-                        
-                    }
-                    
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                        
-                    }
                 }
                 
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                    
+                }
             }
-           
+            
         }
-     
+        
+    }
+    
     
     
 }

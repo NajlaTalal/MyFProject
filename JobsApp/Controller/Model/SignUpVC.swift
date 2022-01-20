@@ -81,7 +81,7 @@ class SignUpVC: UIViewController {
             }else{
                 print("error",error?.localizedDescription)
                 let alert = UIAlertController(title: "تنبيه ", message: "خطأ في التسجيل ، أعد المحاولة", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "حاول مجدداً", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
             

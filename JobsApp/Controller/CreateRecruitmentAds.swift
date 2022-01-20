@@ -24,7 +24,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var segmentLabel: UISegmentedControl!
     
     let arrayCat = ["الكل","صحية","تعليمية","عسكرية","ادارية","مالية","تقنية"]
-//    let arrayCat = ["الكل","صحية","تعليمية","تقنية","عسكرية","ادارية","مالية"]
+    
     
     var imageSendFiresbase : UIImage?
     //MARK: - Variables
@@ -40,7 +40,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.modalPresentationStyle = .fullScreen
+        
         segmentLabel.removeAllSegments()
         for x in 0..<arrayCat.count {
             print(x)
@@ -79,9 +79,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func addBu(_ sender: Any) {
         
-        // here call upload image
-        //        uploadToCloud(fileURL: URL)
-    
+     
         guard imageSendFiresbase != nil else {return }  // here you can ad alert to show user upload data
         uploadToCloud(image: imageSendFiresbase!)
         
@@ -101,7 +99,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
-  
+    
     func checkPermissions() {
         if PHPhotoLibrary.authorizationStatus() != PHAuthorizationStatus.authorized {
             PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) -> Void in
@@ -146,12 +144,12 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
                     photoRef.downloadURL { url, error in
                         if error == nil {
                             print(url!)
-      
+                            
                             let dataNow = Date()
                             let dateFormatter = DateFormatter()
                             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                             let DateNow = dateFormatter.string(from: dataNow)
-                           
+                            
                             self.firestoreURL.collection("RecruitmentAdv")
                                 .addDocument(data:[ "title": self.titleTF.text! ,
                                                     "RecruitmentAdv": self.adsTV.text!,
@@ -166,14 +164,14 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
                             
                             
                             print("Successfully saved data")
-                        
+                            
                             self.performSegue(withIdentifier: "moveHome", sender: self)
                             
                         }
                     }
                 }
             }
-        
+            
         }
         
     }

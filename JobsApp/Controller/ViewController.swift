@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
-//        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        //        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     //MARK: - alert sound
     

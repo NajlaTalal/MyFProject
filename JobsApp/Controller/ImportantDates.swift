@@ -104,7 +104,7 @@ class ImportantDates: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.contentView.frame.size = CGSize(width: 100, height: 100)
         cell.layer.borderColor = #colorLiteral(red: 0.0257745944, green: 0.05412763357, blue: 0.2478517592, alpha: 1)
         cell.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-     
+        
         
         
         return cell
