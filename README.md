@@ -42,6 +42,8 @@ Firebase packages and AVFoundation .
 # Features in future :
 
 Job seekers can create cv in jobs app .
+
 jobs seekers can communicate with HR employees .
+
 Link jobs app with linked in .
 
