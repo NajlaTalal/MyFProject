@@ -15,11 +15,17 @@ Jobs app serves HR emplyees and job seeker , It shows Recruitment ads.
 # Features :
 
 HR employees can create recruitment ads.
+
 HR employees can add logo and the date started of recruitment ads.
+
 Job seekers can browse recruitment ads.
+
 Job seekers can browse important dates.
+
 Job seekers can search important dates.
+
 Users can use search in important dates.
+
 Users can share recruitment ads.
 
 # Platform :
