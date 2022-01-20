@@ -30,10 +30,10 @@ Xcode
 
 Firebase packages and AVFoundation .
 
-#ScreenShots :
+ScreenShots :
 
 
-#Features in future :
+Features in future :
 
 Job seekers can create cv in jobs app .
 jobs seekers can communicate with HR employees .
