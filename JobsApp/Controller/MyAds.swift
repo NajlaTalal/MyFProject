@@ -132,7 +132,7 @@ extension MyAds: UICollectionViewDataSource {
     
     @objc func delete(sender: UIButton!) {
         
-        let alert = UIAlertController(title: "تنبية" , message: "هل تريد حذف الاعلان ؟", preferredStyle: .alert)
+        let alert = UIAlertController(title: "تنبيه" , message: "هل تريد حذف الاعلان ؟", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "نعم", style: .default) { action in
             

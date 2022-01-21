@@ -23,10 +23,9 @@ class MyAdsCell: UICollectionViewCell {
 
         //MARK: - UILabel
 
-        deleteButton.setTitle("delete", for: .normal)
-        deleteButton.setTitleColor(.blue, for: .normal)
-        deleteButton.frame = CGRect(x: 50, y: -50, width: 300, height: 500)
-        
+        deleteButton.setImage(UIImage(systemName: "trash"), for: .normal)
+        deleteButton.frame = CGRect(x: 40, y: 120,  width: 30 , height: 30 )
+        deleteButton.tintColor = .red
         let textLabel = UILabel(frame: .zero)
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(textLabel)
