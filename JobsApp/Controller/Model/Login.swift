@@ -28,6 +28,7 @@ class Login: UIViewController {
         emailTF.setUnderLine()
         passwordTF.setLeftImage(imageName: "lock")
         passwordTF.setUnderLine()
+        hideKeyboardWhenTappedAround()
         
     }
     
@@ -39,7 +40,7 @@ class Login: UIViewController {
             if error == nil {
                 self.performSegue(withIdentifier: "move", sender: nil)
             }else{
-                print("error",error?.localizedDescription)
+                print("error",error?.localizedDescription ?? "")
                 let alert = UIAlertController(title: "تنبيه ", message: "البريد الإلكتروني أو كلمة المرور خطأ ", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "حاول مجدداً", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
@@ -75,3 +76,4 @@ extension UITextField{
         self.leftViewMode = .always
     }
 }
+

@@ -54,7 +54,7 @@ class MyAds: UIViewController {
     
     
     func readdata() {
-        db.collection("RecruitmentAdv").whereField("emailUser",isEqualTo: Auth.auth().currentUser?.email!  ).addSnapshotListener{(querySnapshot, error) in
+        db.collection("RecruitmentAdv").whereField("emailUser",isEqualTo: Auth.auth().currentUser?.email! ?? ""  ).addSnapshotListener{(querySnapshot, error) in
             if let err = error {
                 print("Error getting documents: \(err.localizedDescription)")
             } else {

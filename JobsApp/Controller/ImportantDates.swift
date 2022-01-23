@@ -71,7 +71,7 @@ class ImportantDates: UIViewController, UITableViewDataSource, UITableViewDelega
         ImpDateTableView.dataSource = self
         searchBar.delegate = self
         filteredData = arr
-        
+        hideKeyboardWhenTappedAround()
     }
     
     
@@ -90,7 +90,7 @@ class ImportantDates: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         // you can also put image here
-        var separatorLineView = UIView(frame: CGRect(x: 20, y: 20, width: cell.frame.size.width, height:  cell.frame.size.height))
+        let separatorLineView = UIView(frame: CGRect(x: 20, y: 20, width: cell.frame.size.width, height:  cell.frame.size.height))
         
         cell.contentView.addSubview(separatorLineView)
         cell.contentView.backgroundColor = #colorLiteral(red: 0.09430689365, green: 0.533408463, blue: 0.6434716582, alpha: 1)

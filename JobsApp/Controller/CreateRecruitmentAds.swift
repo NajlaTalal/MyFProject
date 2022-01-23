@@ -53,6 +53,7 @@ class CreateRecruitmentAds: UIViewController, UIImagePickerControllerDelegate, U
         
         imagePickerController.delegate = self
         checkPermissions()
+        hideKeyboardWhenTappedAround()
     }
     //MARK: - Date picker
     @IBAction func datePicker(_ sender: Any) {

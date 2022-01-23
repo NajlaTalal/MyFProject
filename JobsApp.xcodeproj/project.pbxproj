@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B301802A278DD5F800104588 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3018029278DD5F800104588 /* DetailsVC.swift */; };
 		B30F799527818B2500AD3E58 /* ImportantDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30F799427818B2500AD3E58 /* ImportantDates.swift */; };
+		B31141FF279DD29700415A02 /* KGCopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31141FE279DD29700415A02 /* KGCopyableLabel.swift */; };
 		B31595B72784361400F6A320 /* StructRecruitmentAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31595B62784361400F6A320 /* StructRecruitmentAds.swift */; };
 		B31A563527923B8800A68D08 /* btn_click_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = B31A563427923B8800A68D08 /* btn_click_sound.wav */; };
 		B31CC8772796DF8A0051A77E /* MyAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CC8762796DF8A0051A77E /* MyAds.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		B3018029278DD5F800104588 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		B30F799427818B2500AD3E58 /* ImportantDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantDates.swift; sourceTree = "<group>"; };
+		B31141FE279DD29700415A02 /* KGCopyableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGCopyableLabel.swift; sourceTree = "<group>"; };
 		B31595B62784361400F6A320 /* StructRecruitmentAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructRecruitmentAds.swift; sourceTree = "<group>"; };
 		B31A563427923B8800A68D08 /* btn_click_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn_click_sound.wav; sourceTree = "<group>"; };
 		B31CC8762796DF8A0051A77E /* MyAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAds.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				B33960532782E80E00C5963B /* GovernmentalJobs.swift */,
+				B31141FE279DD29700415A02 /* KGCopyableLabel.swift */,
 				B31CC8762796DF8A0051A77E /* MyAds.swift */,
 				B3018029278DD5F800104588 /* DetailsVC.swift */,
 				B37A0D792785CE2A006A398F /* Dates.swift */,
@@ -314,7 +317,6 @@
 			mainGroup = B3888E5627806D8200009493;
 			packageReferences = (
 				B3888ED62780ABF500009493 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				B311E533278920CF008F8689 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = B3888E6027806D8200009493 /* Products */;
 			projectDirPath = "";
@@ -369,6 +371,7 @@
 				B3888E972780A72500009493 /* SignUpVC.swift in Sources */,
 				B33960522782E30700C5963B /* GovJobsCell.swift in Sources */,
 				B375DFA327820A0A0084D555 /* CreateRecruitmentAds.swift in Sources */,
+				B31141FF279DD29700415A02 /* KGCopyableLabel.swift in Sources */,
 				B33DF9F02781DBAF00685BDF /* Login.swift in Sources */,
 				B33DF9E92781C43200685BDF /* ForgotPasswordVC.swift in Sources */,
 				B31CC879279711140051A77E /* MyAdsCell.swift in Sources */,
@@ -560,6 +563,8 @@
 				DEVELOPMENT_TEAM = 8LDQAJBSC7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JobsApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "وظائف";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We use the photos to upload to App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -588,6 +593,8 @@
 				DEVELOPMENT_TEAM = 8LDQAJBSC7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JobsApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "وظائف";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We use the photos to upload to App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -744,14 +751,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B311E533278920CF008F8689 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		B3888ED62780ABF500009493 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";

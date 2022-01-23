@@ -45,7 +45,7 @@ class GovernmentalJobs: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(collectionView)
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
+            collectionView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 150),
             collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
@@ -145,9 +145,9 @@ extension GovernmentalJobs: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "DetailsVC") as? DetailsVC{
-            vc.titleAd = hr[indexPath.row].title ?? ""
-            vc.details = hr[indexPath.row].RecruitmentAds ?? ""
-            vc.datelab = hr[indexPath.row].startDate ?? ""
+            vc.titleAd = hr[indexPath.row].title
+            vc.details = hr[indexPath.row].RecruitmentAds
+            vc.datelab = hr[indexPath.row].startDate
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
@@ -280,7 +280,7 @@ extension GovernmentalJobs: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top:15, left: 8, bottom: 0, right: 8)
+        return UIEdgeInsets.init(top:35, left: 8, bottom: 0, right: 8)
     }
     
     
